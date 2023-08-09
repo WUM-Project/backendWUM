@@ -1,0 +1,7 @@
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.csproj.AssemblyReference.cache
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.AssemblyInfoInputs.cache
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.AssemblyInfo.cs
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.csproj.CoreCompileInputs.cache
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\solpo\source\BigProjects\WumShop\src\Services\Applicant\Applicant.API\obj\Debug\net6.0\Applicant.API.MvcApplicationPartsAssemblyInfo.cache
