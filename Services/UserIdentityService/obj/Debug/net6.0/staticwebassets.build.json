@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0whVhbQYpSVTajIlglWJ/b7rojeVgT6Agc5lrJwFrgI=",
+  "Source": "UserIdentityService",
+  "BasePath": "_content/UserIdentityService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
