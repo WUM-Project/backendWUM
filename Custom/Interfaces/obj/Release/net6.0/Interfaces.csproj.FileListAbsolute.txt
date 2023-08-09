@@ -1,0 +1,12 @@
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\bin\Release\net6.0\Interfaces.deps.json
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\bin\Release\net6.0\Interfaces.dll
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\bin\Release\net6.0\Interfaces.pdb
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.csproj.AssemblyReference.cache
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.AssemblyInfoInputs.cache
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.AssemblyInfo.cs
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.dll
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\refint\Interfaces.dll
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\Interfaces.pdb
+D:\ALEX_LESSONS\WUM\WUM_WEB\Interfaces\obj\Release\net6.0\ref\Interfaces.dll

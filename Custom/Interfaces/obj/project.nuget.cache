@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "acnSZ65wduPFPQvg4Uoj3AA+9/ULcjOrcIwSMcZGS47rj2LEhDG+K1lAHuJ0k52ZS4SkmcSaE6CFiwpYovdXhg==",
+  "success": true,
+  "projectFilePath": "D:\\DIPLOM_WUM\\Custom\\Interfaces\\Interfaces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jekaj\\.nuget\\packages\\shed.corekit.webapi.abstractions\\1.0.0\\shed.corekit.webapi.abstractions.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
