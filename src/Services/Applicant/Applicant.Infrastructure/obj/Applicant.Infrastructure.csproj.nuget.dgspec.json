@@ -1,32 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj": {}
+    "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj": {
+    "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
+        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
         "projectName": "Applicant.Domain",
-        "projectPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
-        "packagesPath": "C:\\Users\\solpo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\obj\\",
+        "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
+        "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
+        "outputPath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\solpo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\WellDone\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,41 +56,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj": {
+    "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj",
         "projectName": "Applicant.Infrastructure",
-        "projectPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\solpo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Infrastructure\\obj\\",
+        "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Infrastructure\\Applicant.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
+        "outputPath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\solpo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\WellDone\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj": {
-                "projectPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj"
+              "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj": {
+                "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj"
               }
             }
           }
@@ -152,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

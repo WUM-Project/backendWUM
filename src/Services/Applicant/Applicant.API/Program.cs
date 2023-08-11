@@ -59,7 +59,7 @@ builder.Services.AddCustomAuthentication(builder.Configuration);
 // builder.Services.AddScoped<IServiceManager, ServiceManager>();
 
 //add service RepositoryManager
-// builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddGrpc();
 
 builder.Services.AddControllers();

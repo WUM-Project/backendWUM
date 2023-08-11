@@ -19,9 +19,6 @@ namespace Applicant.API.Application.Services.Interfaces
         Task DeleteAsync(string id, CancellationToken cancellationToken = default);
         Task AddRoleAsync(UserRoleDto userRoleDto, CancellationToken cancellationToken = default);
         Task RemoveRoleAsync(UserRoleDto userRoleDto, CancellationToken cancellationToken = default);
-        Task<IEnumerable<UserExamDto>> GetUserExamsAsync(string id, CancellationToken cancellationToken = default);
-        Task<IEnumerable<UserExamReadDto>> GetExamUsersAsync(int examId, CancellationToken cancellationToken = default);
-        Task AddExamToUserAsync(UserExamDto userExamDto, CancellationToken cancellationToken = default);
-        Task RemoveExamFromUser(UserExamDto userExamDto, CancellationToken cancellationToken = default);
+      
     }
 }

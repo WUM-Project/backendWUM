@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IEqS2edWzY6sQfnw/ms0PEvpYkicf9/bHkQxUH40Dbw4Vq08+LNWAT/a9KTtJyFVN1PddM7I8oSpfEq3+0hn0Q==",
+  "dgSpecHash": "LMT6SN24Zv/uG1V3TstuXSrrs4GYDAt1f8p6VcMnNJt+lnVSPNsOG+zhCS9K0YK8Gu2oG52R8hub0oIfFqXzEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
+  "projectFilePath": "D:\\Диплом\\backendWUM\\src\\Services\\Applicant\\Applicant.Domain\\Applicant.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

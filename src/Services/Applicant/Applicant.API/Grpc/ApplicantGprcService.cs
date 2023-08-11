@@ -25,28 +25,28 @@ namespace Applicant.API.Grpc
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public override async Task<RemoveExamResponce> RemoveExamFromApplicantData(RemoveExamRequest request, ServerCallContext context)
-        {
-            try
-            {
-                var userExamDto = _mapper.Map<UserExamDto>(request);
-                await _serviceManager.UserService.RemoveExamFromUser(userExamDto);
+        // public override async Task<RemoveExamResponce> RemoveExamFromApplicantData(RemoveExamRequest request, ServerCallContext context)
+        // {
+        //     try
+        //     {
+        //         var userExamDto = _mapper.Map<UserExamDto>(request);
+        //         await _serviceManager.UserService.RemoveExamFromUser(userExamDto);
 
-                return new RemoveExamResponce
-                {
-                    Success = true
-                };
-            }
-            catch (Exception ex)
-            {
-                return new RemoveExamResponce
-                {
-                    Success = false,
-                    Error = ex.Message
-                };
-            }
+        //         return new RemoveExamResponce
+        //         {
+        //             Success = true
+        //         };
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         return new RemoveExamResponce
+        //         {
+        //             Success = false,
+        //             Error = ex.Message
+        //         };
+        //     }
 
-        }
+        // }
 
         public override async Task<GetUserDataResponse> GetUseData(GetUserDataRequest request, ServerCallContext context)
         {
@@ -64,19 +64,19 @@ namespace Applicant.API.Grpc
             return response;
         }
 
-        public override async Task<UserExamResponse> CheckIfExamExistsInUsers(UserExamRequest request, ServerCallContext context)
-        {
-            var userExams = await _serviceManager.UserService.GetExamUsersAsync(request.ExamId);
+        // public override async Task<UserExamResponse> CheckIfExamExistsInUsers(UserExamRequest request, ServerCallContext context)
+        // {
+        //     var userExams = await _serviceManager.UserService.GetExamUsersAsync(request.ExamId);
 
-            UserExamResponse response = new UserExamResponse() { Exists = false };
+        //     UserExamResponse response = new UserExamResponse() { Exists = false };
 
-            if(userExams != null && userExams.Count()>0)
-            {
-                response.Exists = true;
-                return response;
-            }
+        //     if(userExams != null && userExams.Count()>0)
+        //     {
+        //         response.Exists = true;
+        //         return response;
+        //     }
 
-            return response;
-        }
+        //     return response;
+        // }
     }
 }

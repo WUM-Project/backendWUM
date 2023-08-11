@@ -173,59 +173,11 @@ namespace Applicant.API.Controllers
         }
 
 
-        [HttpGet]
-        [Route("{id}/Exams")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Manager, Student")]
-        public async Task<IActionResult> GetUserExams(string id, int page, int limit)
-        {
-            var userExams = await _serviceManager.UserService.GetUserExamsAsync(id);
-            return Ok(Paggination<UserExamDto>.GetData(currentPage: page, limit: limit, itemsData: userExams));
-        }
 
 
-        [HttpPost]
-        [Route("AddExam")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Manager")]
-        public async Task<IActionResult> AddExamToUser(UserExamDto userExamDto)
-        {
-            if (ModelState.IsValid)
-            {
-                await _serviceManager.UserService.AddExamToUserAsync(userExamDto);
-                return Ok();
-            }
+    
 
-            return BadRequest(GetModelStateErrors(ModelState.Values));
-        }
-
-
-        [HttpPost]
-        [Route("RemoveExam")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Manager,Student")]
-        public async Task<IActionResult> RemoveExamFromUser(UserExamDto userExamDto)
-        {
-            if (ModelState.IsValid)
-            {
-                await _serviceManager.UserService.RemoveExamFromUser(userExamDto);
-                return Ok();
-            }
-
-            return BadRequest(GetModelStateErrors(ModelState.Values));
-        }
-
-        [HttpGet]
-        [Route("e/{idExam}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Manager")]
-
-        public async Task<IActionResult> GetExamUsers(int idExam, int page,  int middleVal = 10,
-            int cntBetween = 5, int limit = 15, CancellationToken cancellationToken = default)
-        {
-            var users = await _serviceManager.UserService.GetExamUsersAsync(idExam, cancellationToken);
-
-
-            return Ok(Paggination<UserExamReadDto>.GetData(currentPage: page, limit: limit, itemsData: users,
-                middleVal: middleVal, cntBetween: cntBetween));
-            //return Ok(users);
-        }
+      
 
         [HttpPost]
         [Route("SendMessage")]
