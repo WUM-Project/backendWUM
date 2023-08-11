@@ -17,12 +17,12 @@ namespace Applicant.API.Application.Contracts.Profiles
             CreateMap<UserCreateDto, User>();
             CreateMap<UserExamDto, User>();
             CreateMap<User, UserExamDto>();
-            CreateMap<RemoveExamRequest, UserExamDto>();
-            CreateMap<UserExamDto, RemoveExamRequest>();
+            // CreateMap<RemoveExamRequest, UserExamDto>();
+            // CreateMap<UserExamDto, RemoveExamRequest>();
             CreateMap<UserUpdateDto, User>();
             CreateMap<UserExams, UserReadDto>();
             CreateMap<UserExams, UserExamDto>();
-            CreateMap<UserReadDto, GetUserDataResponse>();
+            // CreateMap<UserReadDto, GetUserDataResponse>();
         }
 
     }

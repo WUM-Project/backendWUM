@@ -56,10 +56,10 @@ builder.Services.AddCustomAuthentication(builder.Configuration);
 
 
 //add service ServiceManager
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
+// builder.Services.AddScoped<IServiceManager, ServiceManager>();
 
 //add service RepositoryManager
-builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+// builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddGrpc();
 
 builder.Services.AddControllers();
@@ -92,7 +92,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
     endpoints.MapGrpcService<ApplicantGrpcService>();
 });
-PrepDb.PrepPopulation(app, builder.Environment.IsProduction());
+// PrepDb.PrepPopulation(app, builder.Environment.IsProduction());
 
 app.Run();
 

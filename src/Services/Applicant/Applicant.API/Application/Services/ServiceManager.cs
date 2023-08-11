@@ -13,15 +13,17 @@ using Applicant.API.Application.Contracts.Infrastructure;
 namespace Applicant.API.Application.Services
 {
     public class ServiceManager : IServiceManager
-    {
+    {   
+        
         private readonly Lazy<IAccessCodeService> _lazyAccessCodeService;
         private readonly Lazy<IUserService> _lazyUserService;
-
+//  IReportGrpcService reportGrpcService, IExamGrpcService examGrpcService,
         public ServiceManager(IRepositoryManager repositoryManager, IMapper mapper, 
-            IOptionsMonitor<JwtConfig> optionsMonitor, IReportGrpcService reportGrpcService, IExamGrpcService examGrpcService, IEmailService emailService)
+            IOptionsMonitor<JwtConfig> optionsMonitor, IEmailService emailService)
         {
             _lazyAccessCodeService = new Lazy<IAccessCodeService>(() => new AccessCodeService(repositoryManager, mapper, optionsMonitor,emailService));
-            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager, mapper, reportGrpcService, examGrpcService, emailService));
+            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager, mapper,  emailService));
+            // reportGrpcService, examGrpcService,
         }
 
         public IAccessCodeService AccessCodeService => _lazyAccessCodeService.Value;

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <!-- <Nullable>enable</Nullable> -->
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>69149245-a2cb-469d-9bd4-fc2b06527f9c</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
@@ -37,5 +37,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Applicant.Infrastructure\Applicant.Infrastructure.csproj" />
   </ItemGroup>
+  	<ItemGroup>
+		 <Protobuf Include="Proto\exam.proto" GrpcServices="Client" />
+		<Protobuf Include="Proto\report.proto" GrpcServices="Client" /> 
+		<Protobuf Include="Proto\applicant.proto" GrpcServices="Server" />
+	</ItemGroup>
 
 </Project>

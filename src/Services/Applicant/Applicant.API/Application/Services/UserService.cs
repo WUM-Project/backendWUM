@@ -36,18 +36,19 @@ namespace Applicant.API.Application.Services
         private PasswordHasher<User> _hasher;
         private readonly IEmailService _emailService;
         private readonly IRepositoryManager _repositoryManager;
-        private readonly IExamGrpcService _examGrpcService;
+        // private readonly IExamGrpcService _examGrpcService;
         private readonly IReportGrpcService _reportGrpcService;
-
+    // IReportGrpcService reportGrpcService,
+//    IExamGrpcService examGrpcService,
         public UserService(IRepositoryManager repositoryManager, IMapper mapper,
-            IReportGrpcService reportGrpcService, IExamGrpcService examGrpcService, IEmailService emailService)
+       IEmailService emailService)
         {
             _mapper = mapper;
             _emailService = emailService;
             _hasher = new PasswordHasher<User>();
             _repositoryManager = repositoryManager;
-            _reportGrpcService = reportGrpcService;
-            _examGrpcService = examGrpcService;
+            // _reportGrpcService = reportGrpcService;
+            // _examGrpcService = examGrpcService;
         }
 
         public async Task<IEnumerable<UserReadDto>> GetAllAsync(CancellationToken cancellationToken = default)
@@ -131,7 +132,7 @@ namespace Applicant.API.Application.Services
             //    mail.Body = $"</h1>Your email: {userCreateDto.Email} | Password: {password}</h1>";
             //    //mail.Attachments.Add(new Attachment("D:\\Aloha.7z"));//--Uncomment this to send any attachment  
 
-            //    // SmtpClient клас з за до якого можна відправити лист
+            //    // SmtpClient пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
             //    using (SmtpClient smtp = new SmtpClient(_emailConfig.SmtpServer, _emailConfig.Port))
             //    {
@@ -239,7 +240,7 @@ namespace Applicant.API.Application.Services
             //    mail.Body = $"<h1>Your access code: {accessCode}</h1>";
             //    //mail.Attachments.Add(new Attachment("D:\\Aloha.7z"));//--Uncomment this to send any attachment  
 
-            //    // SmtpClient клас з за до якого можна відправити лист
+            //    // SmtpClient пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
             //    using (SmtpClient smtp = new SmtpClient(_emailConfig.SmtpServer, _emailConfig.Port))
             //    {
@@ -306,18 +307,18 @@ namespace Applicant.API.Application.Services
                 }
             }
 
-            // gRPC service delete report by userId
-            var reportResult =  _reportGrpcService.RemoveUserDataFromReport(id);
+            // // gRPC service delete report by userId
+            // var reportResult =  _reportGrpcService.RemoveUserDataFromReport(id);
 
-            if (reportResult.Success)
-            {
-                _repositoryManager.UserRepository.Delete(user);
-                await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
-            }
-            else
-            {
-                throw new UserNotFoundException(user.Id, reportResult.Error);
-            }
+            // if (reportResult.Success)
+            // {
+            //     _repositoryManager.UserRepository.Delete(user);
+            //     await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+            // }
+            // else
+            // {
+            //     throw new UserNotFoundException(user.Id, reportResult.Error);
+            // }
         }
 
         public async Task AddRoleAsync(UserRoleDto userRoleDto, CancellationToken cancellationToken = default)
@@ -423,34 +424,34 @@ namespace Applicant.API.Application.Services
                 throw new ExamIsAlreadyExistException(userExamDto.ExamId);
             }
 
-            var examQuestions =  _examGrpcService.GetExamQuestions(userExamDto.ExamId);
+            // var examQuestions =  _examGrpcService.GetExamQuestions(userExamDto.ExamId);
 
-            if(!examQuestions.Exists)
-            {
-                throw new BadRequestMessage($"Could not add exam to user.Exam with id: {userExamDto.ExamId} not found!");
-            }
+            // if(!examQuestions.Exists)
+            // {
+            //     throw new BadRequestMessage($"Could not add exam to user.Exam with id: {userExamDto.ExamId} not found!");
+            // }
 
-            if(examQuestions.Questions.Count() == 0)
-            {
-                throw new BadRequestMessage($"could not add exam to user. Exam with id: {userExamDto.ExamId} is empty!");
-            }
+            // if(examQuestions.Questions.Count() == 0)
+            // {
+            //     throw new BadRequestMessage($"could not add exam to user. Exam with id: {userExamDto.ExamId} is empty!");
+            // }
 
 
-            // gRPC service check exam data in the report service
-            var reportResult =  _reportGrpcService.IsExistExamRequest(userExamDto.UserId, userExamDto.ExamId);
+            // // gRPC service check exam data in the report service
+            // var reportResult =  _reportGrpcService.IsExistExamRequest(userExamDto.UserId, userExamDto.ExamId);
 
-            if (reportResult.Success)
-            {
-                throw new BadRequestMessage($"Could not add exam to user. The exam with id: {userExamDto.ExamId} already exists in Report");
-            }
+            // if (reportResult.Success)
+            // {
+            //     throw new BadRequestMessage($"Could not add exam to user. The exam with id: {userExamDto.ExamId} already exists in Report");
+            // }
 
-            var newUserExam = new UserExams()
-            {
-                ExamId = userExamDto.ExamId,
-                UserId = userExamDto.UserId
-            };
+            // var newUserExam = new UserExams()
+            // {
+            //     ExamId = userExamDto.ExamId,
+            //     UserId = userExamDto.UserId
+            // };
 
-            _repositoryManager.UserExamsRepository.Insert(newUserExam);
+            // _repositoryManager.UserExamsRepository.Insert(newUserExam);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
 
