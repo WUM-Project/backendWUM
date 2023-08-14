@@ -28,20 +28,23 @@ builder.Services.AddCors(c =>
     c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
 
-
-if (builder.Environment.IsStaging())
-{
-    Console.WriteLine("\n---> Staging");
-    Console.WriteLine("\n---> Using SQL Server Staging\n");
-
-    builder.Services.AddDbContext<AppDbContext>(opt =>
+  builder.Services.AddDbContext<AppDbContext>(opt =>
+         
          opt.UseSqlServer(builder.Configuration.GetConnectionString("UsersConnection")));
 
-    //Console.WriteLine("\n---> Using InMem Db Staging\n");
+// if (builder.Environment.IsStaging())
+// {
+//     Console.WriteLine("\n---> Staging");
+//     Console.WriteLine("\n---> Using SQL Server Staging\n");
+     
+//     builder.Services.AddDbContext<AppDbContext>(opt =>
+//          opt.UseSqlServer(builder.Configuration.GetConnectionString("UsersConnection")));
 
-    //services.AddDbContext<AppDbContext>(opt =>
-    //   opt.UseInMemoryDatabase("InMem"));
-}
+//     //Console.WriteLine("\n---> Using InMem Db Staging\n");
+
+//     //services.AddDbContext<AppDbContext>(opt =>
+//     //   opt.UseInMemoryDatabase("InMem"));
+// }
 
 //Grpc
 builder.Services.AddScoped<IExamGrpcService, ExamGrpcService>();
@@ -56,7 +59,7 @@ builder.Services.AddCustomAuthentication(builder.Configuration);
 
 
 //add service ServiceManager
-// builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<IServiceManager, ServiceManager>();
 
 //add service RepositoryManager
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
@@ -68,6 +71,31 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Applicant.API", Version = "v1" });
+
+    //Add authorize to swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
 });
 
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
