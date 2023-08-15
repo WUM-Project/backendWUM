@@ -307,6 +307,9 @@ namespace Applicant.API.Application.Services
                 }
             }
 
+                 _repositoryManager.UserRepository.Delete(user);
+              
+                await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             // // gRPC service delete report by userId
             // var reportResult =  _reportGrpcService.RemoveUserDataFromReport(id);
 

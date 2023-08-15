@@ -58,17 +58,17 @@ namespace Applicant.API.Application.Services
             //var userCodes = _context.AccessCodes.Where(x => x.Email == user.Email).OrderByDescending(x => x.ExpiryDate).ToList();
             var userCodes = await _repositoryManager.AccessCodeRepository.GetAllByEmail(authRegisterDto.Email);
 
-            if (userCodes.ToList().Count == 0)
-            {
-                await AccessCodeAsync(authRegisterDto);
-                return null;
-                //throw new AccessCodeNotFoundException();
-            }
-
-            if (userCodes.ToList()[0].Code != authRegisterDto.Code)
-            {
-                throw new AccessCodeIncorrectException();
-            }
+            // if (userCodes.ToList().Count == 0)
+            // {
+            //     await AccessCodeAsync(authRegisterDto);
+            //     return null;
+            //     //throw new AccessCodeNotFoundException();
+            // }
+              //Розкоментати якщо треба буде підтвердження пошти
+            // if (userCodes.ToList()[0].Code != authRegisterDto.Code)
+            // {
+            //     throw new AccessCodeIncorrectException();
+            // }
 
             var newUser = new User()
             {
