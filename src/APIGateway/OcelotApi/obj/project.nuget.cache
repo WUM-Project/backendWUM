@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wb+FHCW34Gbh3r+z22+FEhGn7Xbdtd9evFQLxfCbiMkI7gKmOUW48wDAoSjaVei/q+txvkX1IYdWnNnK0CVTnQ==",
+  "dgSpecHash": "SAfUtgpNZFgaRx+yhYVOCWztcxmUtm8p9DMhkAhVl8X7rFKLxYMmR9oJvIC+QZgTdO7r7LfnmBr5IwDgAqclPQ==",
   "success": true,
-  "projectFilePath": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
+  "projectFilePath": "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WellDone\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\WellDone\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.1\\microsoft.aspnetcore.jsonpatch.6.0.1.nupkg.sha512",

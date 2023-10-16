@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj": {}
+    "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj": {}
   },
   "projects": {
-    "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj": {
+    "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
+        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
         "projectName": "OcelotApi",
-        "projectPath": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
+        "projectPath": "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
         "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
-        "outputPath": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\obj\\",
+        "outputPath": "D:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aVOmZCbFaVEALh5wGNoJDo7zX/HwK0v/XVyBEvv/38g/xGzPTdVFl8WFZqk5F0/Swdpt93pgjVbqGIN5pOUKrA==",
+  "dgSpecHash": "kmIzjlySQPhujX/zHYi6RHqB9c8+ILmaxm+sLKG1dJcQdmSbyJ4no4MSgr6F9BaHrFBwUUtTm7B08mYb/dnacQ==",
   "success": true,
-  "projectFilePath": "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+  "projectFilePath": "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WellDone\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {}
+    "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {}
   },
   "projects": {
-    "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
+    "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
         "projectName": "EventBus",
-        "projectPath": "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+        "projectPath": "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
         "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
-        "outputPath": "d:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\obj\\",
+        "outputPath": "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
