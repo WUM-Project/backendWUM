@@ -111,6 +111,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseRouting();
+//For images
+app.UseStaticFiles();
 app.UseCors("AllowOrigin");
 app.UseAuthentication();
 app.UseAuthorization();

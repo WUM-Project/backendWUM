@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "dsw+z5JRLfbvfnm4YN5rLHYjFUjigEjIU18xRsIfEX0=",
+  "Hash": "TSpANlUcS+6Y2kg3OTkL/nxDHq9tcpEQ1HEZYJ6Xu3A=",
   "Source": "Catalog.API",
   "BasePath": "_content/Catalog.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Catalog.API\\wwwroot",
+      "Source": "Catalog.API",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\brand-2.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/categories/brand-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\categories\\brand-2.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\546a04eb9601e_thor_hammer.png",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/product/546a04eb9601e_thor_hammer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\product\\546a04eb9601e_thor_hammer.png"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\brand-1.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/product/brand-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\product\\brand-1.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\team1.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/product/team1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\product\\team1.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\blog-2.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/test/blog-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\test\\blog-2.jpg"
+    }
+  ]
 }

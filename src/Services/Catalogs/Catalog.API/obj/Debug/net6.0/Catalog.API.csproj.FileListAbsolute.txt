@@ -281,3 +281,4 @@ D:\Диплом\backendWUM\src\Services\Catalogs\Catalog.API\obj\Debug\net6.0\re
 D:\Диплом\backendWUM\src\Services\Catalogs\Catalog.API\obj\Debug\net6.0\Catalog.API.pdb
 D:\Диплом\backendWUM\src\Services\Catalogs\Catalog.API\obj\Debug\net6.0\Catalog.API.genruntimeconfig.cache
 D:\Диплом\backendWUM\src\Services\Catalogs\Catalog.API\obj\Debug\net6.0\ref\Catalog.API.dll
+D:\Диплом\backendWUM\src\Services\Catalogs\Catalog.API\bin\Debug\net6.0\Catalog.API.staticwebassets.runtime.json
