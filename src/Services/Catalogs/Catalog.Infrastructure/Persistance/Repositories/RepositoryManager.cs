@@ -12,8 +12,9 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         // private readonly Lazy<IRoleRepository> _lazyRoleRepository;
         // private readonly Lazy<IUserRepository> _lazyUserRepository;
      
-        // private readonly Lazy<IUnitOfWork> _lazyUnitOfWork;
+        private readonly Lazy<IUnitOfWork> _lazyUnitOfWork;
        private readonly Lazy<ICategoryRepository> _lazyCategoryRepository;
+       private readonly Lazy<IUploadRepository> _lazyUploadedFilesRepository;
         public RepositoryManager(AppDbContext dbContext)
         {     
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
@@ -22,8 +23,9 @@ namespace Catalog.Infrasructure.Persistance.Repositories
             // _lazyUserExamsRepository = new Lazy<IUserExamsRepository>(() => new UserExamsRepository(dbContext));
             // _lazyRoleRepository = new Lazy<IRoleRepository>(() => new RoleRepository(dbContext));
             // _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository(dbContext));
-            // _lazyUnitOfWork = new Lazy<IUnitOfWork>(() => new UnitOfWork(dbContext));
+            _lazyUnitOfWork = new Lazy<IUnitOfWork>(() => new UnitOfWork(dbContext));
             _lazyCategoryRepository = new Lazy<ICategoryRepository>(() => new CategoryRepository(dbContext));
+            _lazyUploadedFilesRepository = new Lazy<IUploadRepository>(() => new UploadRepository(dbContext));
         }
 
         // public IRefreshTokenRepository RefreshTokenRepository => _lazyRefreshTokenRepository.Value;
@@ -31,8 +33,9 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         // // public IUserExamsRepository UserExamsRepository => _lazyUserExamsRepository.Value;
         // public IRoleRepository RoleRepository => _lazyRoleRepository.Value;
         // public IUserRepository UserRepository => _lazyUserRepository.Value;
-        // public IUnitOfWork UnitOfWork => _lazyUnitOfWork.Value;
+        public IUnitOfWork UnitOfWork => _lazyUnitOfWork.Value;
         public ICategoryRepository CategoryRepository => _lazyCategoryRepository.Value;
+        public IUploadRepository UploadRepository => _lazyUploadedFilesRepository.Value;
     }
 
 }

@@ -25,6 +25,7 @@ namespace Catalog.Infrastructure
         public DbSet<Category> Categories { get; set; }
         public DbSet<Mark> Marks { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<UploadedFiles> UploadedFile { get; set; }
      
 
         protected override void OnModelCreating(ModelBuilder builder)
