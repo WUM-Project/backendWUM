@@ -82,6 +82,59 @@ namespace Catalog.API.Controllers
                 return Ok(passcount + " Files uploaded &" + errorcount + " files failed");
            
         }
+          [HttpPost]
+           [Route("SingleUploadImage")]
+           //Add single upload image
+        public async Task<IActionResult> UploadFileSystem(IFormFile file, string FolderName)
+        {
+        //    APIResponse response=new APIResponse();
+        //       try
+        //   {
+                // var response =null;
+                 UploadedFiles result = new UploadedFiles();
+                var basePath = Path.Combine("wwwroot\\Uploads\\" + FolderName);
+                bool basePathExists = System.IO.Directory.Exists(basePath);
+                if (!basePathExists) Directory.CreateDirectory(basePath);
+                var fileName = Path.GetFileNameWithoutExtension(file.FileName);
+               
+                var mainPath = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}"+ "/Uploads/" + FolderName;
+                var currentPath =Path.Combine(mainPath, file.FileName);
+                // this.environment.WebRootPath + "\\Upload\\product\\"
+                 var filePath = Path.Combine(basePath, file.FileName);
+                var extension = Path.GetExtension(file.FileName);
+                if (!System.IO.File.Exists(filePath))
+                {
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                      
+                    }
+                    var fileModel = new UploadedFiles
+                    {
+                        CreatedAt = DateTime.UtcNow,
+                        FileType = file.ContentType,
+                        Extension = extension,
+                        Name = fileName,
+                        // Description = description,
+                        FilePath = currentPath
+                    };
+             result=  await  _serviceManager.UploadService.CreateAsync(fileModel);
+                //   response.Result= result;
+                
+                    // context.SaveChanges();
+                 
+            }
+            return Ok(result);
+        //  }
+        //    catch(Exception ex){
+        
+        //     Console.WriteLine(ex);
+        //     // return ex;
+        //    }
+           
+                // return Ok(passcount + " Files uploaded &" + errorcount + " files failed");
+           
+        }
 
 
 

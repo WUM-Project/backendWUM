@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TSpANlUcS+6Y2kg3OTkL/nxDHq9tcpEQ1HEZYJ6Xu3A=",
+  "Hash": "w2i+tCex+EN05qtbBoGWby/DaD7eRDCpt9K5aej5h10=",
   "Source": "Catalog.API",
   "BasePath": "_content/Catalog.API",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\brand-1.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\photographer2-1.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/product/photographer2-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\product\\photographer2-1.jpg"
     },
     {
       "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\team1.jpg",
