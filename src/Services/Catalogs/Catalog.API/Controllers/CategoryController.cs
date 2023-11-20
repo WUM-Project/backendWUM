@@ -69,7 +69,7 @@ namespace Catalog.API.Controllers
             }
          
 
-         
+         Console.WriteLine(result);
 
             return Ok(result);
         }

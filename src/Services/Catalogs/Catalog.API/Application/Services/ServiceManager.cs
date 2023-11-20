@@ -18,6 +18,7 @@ namespace Catalog.API.Application.Services
         
 
         private readonly Lazy<ICategoryService> _lazyCategoryService;
+        private readonly Lazy<IProductService> _lazyProductService;
         private readonly Lazy<IUploadService> _lazyUploadService;
  
 
@@ -26,6 +27,7 @@ namespace Catalog.API.Application.Services
         {
            
             _lazyCategoryService = new Lazy<ICategoryService>(() => new CategoryService(repositoryManager, mapper));
+            _lazyProductService = new Lazy<IProductService>(() => new ProductService(repositoryManager, mapper));
             _lazyUploadService = new Lazy<IUploadService>(() => new UploadService(repositoryManager, mapper));
             
             // reportGrpcService, examGrpcService,
@@ -33,6 +35,7 @@ namespace Catalog.API.Application.Services
 
   
         public ICategoryService CategoryService => _lazyCategoryService.Value;
+        public IProductService ProductService => _lazyProductService.Value;
         public IUploadService UploadService => _lazyUploadService.Value;
     }
 

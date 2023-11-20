@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WzLILXykkYIVMJWkvN7MSx9hw1ZejX0oBxUcbkk15yk=",
+  "Hash": "B+6Qcs2k72dotPnU/QtfOKogiJkdeUjJcHdOsLNhtew=",
   "Source": "Catalog.API",
   "BasePath": "_content/Catalog.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Catalog.API\\wwwroot",
       "Source": "Catalog.API",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-1.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-2.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-2.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2_20231114204125201.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2_20231114204125201.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-2_20231114204125201.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-2_20231114204125201.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2_20231114204525775.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-2_20231114204525775.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-2_20231114204525775.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-2_20231114204525775.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-3.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-3.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3_1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3_1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-3_1.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-3_1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3_20231114204300879.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-3_20231114204300879.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-3_20231114204300879.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-3_20231114204300879.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-4.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\3d-4.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/3d-4.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\3d-4.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\banner_two_20231120151402883.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\banner_two_20231120151402883.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/banner_two_20231120151402883.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\banner_two_20231120151402883.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\blog-image-2.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\blog-image-2.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/blog-image-2.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\blog-image-2.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\brand-1-big.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\brand-1-big.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/brand-1-big.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\brand-1-big.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\brand-5.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\brand-5.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/brand-5.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\brand-5.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\carrier_block_data_img.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\carrier_block_data_img.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/carrier_block_data_img.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\carrier_block_data_img.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\contact-bg.png",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\contact-bg.png",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/contact-bg.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\contact-bg.png"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\craftsman1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\craftsman1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/craftsman1.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\craftsman1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\craftsman2.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\craftsman2.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/craftsman2.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\craftsman2.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231114212158532.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231114212158532.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/gc_20231114212158532.jpg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\gc_20231114212158532.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231115013759122.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231115013759122.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/gc_20231115013759122.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\gc_20231115013759122.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231115013843755.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gc_20231115013843755.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/gc_20231115013843755.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\gc_20231115013843755.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gu1_20231114210123047.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\gu1_20231114210123047.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/gu1_20231114210123047.jpg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\gu1_20231114210123047.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\ikachu-face-png-transparent-pikachu-face-pikachu-face-11563520160crzgy6kreu_20231115172820991.png",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\ikachu-face-png-transparent-pikachu-face-pikachu-face-11563520160crzgy6kreu_20231115172820991.png",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/ikachu-face-png-transparent-pikachu-face-pikachu-face-11563520160crzgy6kreu_20231115172820991.png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\ikachu-face-png-transparent-pikachu-face-pikachu-face-11563520160crzgy6kreu_20231115172820991.png"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\ledes_20231115013608798.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\ledes_20231115013608798.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/ledes_20231115013608798.jpg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\ledes_20231115013608798.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\new_20231114211616614.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\new_20231114211616614.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/new_20231114211616614.jpg",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\new_20231114211616614.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\pikachu-car_20231115160000147.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\pikachu-car_20231115160000147.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/pikachu-car_20231115160000147.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\pikachu-car_20231115160000147.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\services_block_13_20231120151656018.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\services_block_13_20231120151656018.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/services_block_13_20231120151656018.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\services_block_13_20231120151656018.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_2470740__20231114212144746.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_2470740__20231114212144746.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/SKU_2470740__20231114212144746.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\SKU_2470740__20231114212144746.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_41027__20231114210452699.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_41027__20231114210452699.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/SKU_41027__20231114210452699.jpg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\SKU_41027__20231114210452699.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_41059__20231114211446417.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categories\\SKU_41059__20231114211446417.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categories/SKU_41059__20231114211446417.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categories\\SKU_41059__20231114211446417.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\3d-1_20231114204300939.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\3d-1_20231114204300939.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categoriesIcon/3d-1_20231114204300939.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categoriesIcon\\3d-1_20231114204300939.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\services_block_13_20231120151403945.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\services_block_13_20231120151403945.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categoriesIcon/services_block_13_20231120151403945.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categoriesIcon\\services_block_13_20231120151403945.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\services_block_9_20231120151656040.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\services_block_9_20231120151656040.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categoriesIcon/services_block_9_20231120151656040.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categoriesIcon\\services_block_9_20231120151656040.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\sp2_20231115160000911.png",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\categoriesIcon\\sp2_20231115160000911.png",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/categoriesIcon/sp2_20231115160000911.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\categoriesIcon\\sp2_20231115160000911.png"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\546a04eb9601e_thor_hammer.png",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\546a04eb9601e_thor_hammer.png",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/product/546a04eb9601e_thor_hammer.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\546a04eb9601e_thor_hammer.png"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\brand-1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\brand-1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/product/brand-1.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\brand-1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\photographer2-1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\photographer2-1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/product/photographer2-1.jpg",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\photographer2-1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\team1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\product\\team1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/product/team1.jpg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\team1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/test/3d-1.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\test\\3d-1.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1.jpg_20231114203223438.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1.jpg_20231114203223438.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/test/3d-1.jpg_20231114203223438.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\test\\3d-1.jpg_20231114203223438.jpg"
     },
     {
-      "Identity": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1_20231114203504364.jpg",
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1_20231114203504364.jpg",
       "SourceId": "Catalog.API",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
       "BasePath": "_content/Catalog.API",
       "RelativePath": "Uploads/test/3d-1_20231114203504364.jpg",
       "AssetKind": "All",

@@ -6,6 +6,7 @@ namespace Catalog.API.Application.Services.Interfaces
     {
       
         ICategoryService CategoryService { get; }
+        IProductService ProductService { get; }
         IUploadService UploadService { get; }
     }
 }
