@@ -65,6 +65,7 @@ namespace Catalog.API.Controllers
                         FileType = file.ContentType,
                         Extension = extension,
                         Name = fileName,
+                            Path = filePath,
                         // Description = description,
                         FilePath = currentPath
                     };
@@ -91,16 +92,23 @@ namespace Catalog.API.Controllers
         //       try
         //   {
                 // var response =null;
+                Console.WriteLine(file);
                  UploadedFiles result = new UploadedFiles();
                 var basePath = Path.Combine("wwwroot\\Uploads\\" + FolderName);
                 bool basePathExists = System.IO.Directory.Exists(basePath);
                 if (!basePathExists) Directory.CreateDirectory(basePath);
                 var fileName = Path.GetFileNameWithoutExtension(file.FileName);
-               
+            //    Path.GetFileName(FileInput.PostedFile.FileName)+"_"+System.DateTime.Now.ToShortTimeString();
                 var mainPath = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}"+ "/Uploads/" + FolderName;
-                var currentPath =Path.Combine(mainPath, file.FileName);
+               
                 // this.environment.WebRootPath + "\\Upload\\product\\"
-                 var filePath = Path.Combine(basePath, file.FileName);
+              var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file.FileName);
+               var fileExtension = Path.GetExtension(file.FileName);
+               var timestamp = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+               var newFileName = $"{fileNameWithoutExtension}_{timestamp}{fileExtension}";
+                 var filePath = Path.Combine(basePath, newFileName);
+                //  var filePath = Path.Combine(basePath, file.FileName);
+                  var currentPath =Path.Combine(mainPath, newFileName);
                 var extension = Path.GetExtension(file.FileName);
                 if (!System.IO.File.Exists(filePath))
                 {
@@ -114,7 +122,9 @@ namespace Catalog.API.Controllers
                         CreatedAt = DateTime.UtcNow,
                         FileType = file.ContentType,
                         Extension = extension,
-                        Name = fileName,
+                        Name = newFileName,
+                        // Name = fileName,
+                        Path = filePath,
                         // Description = description,
                         FilePath = currentPath
                     };
@@ -142,6 +152,25 @@ namespace Catalog.API.Controllers
 
    
    
+
+        [HttpDelete("{id}")]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+        public async Task<IActionResult> DeleteFile(int id)
+        {
+            Console.WriteLine($"\n---> Delete File: {id} ....");
+            var result =  await _serviceManager.UploadService.GetByIdAsync(id);
+            
+           
+            if(result.Path != null){
+              if (System.IO.File.Exists(result.Path))
+            {
+                System.IO.File.Delete(result.Path);
+            }
+            }
+            await _serviceManager.UploadService.DeleteAsync(id);
+
+            return NoContent();
+        }
 
   
 

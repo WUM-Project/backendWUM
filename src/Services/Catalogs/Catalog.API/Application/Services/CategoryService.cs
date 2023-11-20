@@ -57,7 +57,7 @@ namespace Catalog.API.Application.Services
         public async Task<IEnumerable<CategoryReadDto>> GetAllChild(int ParentId,CancellationToken cancellationToken = default)
         {
             var categories = await _repositoryManager.CategoryRepository.FindAllAsync(x=>x.ParentId == ParentId );
-       
+     
             var categoryDto = _mapper.Map<IEnumerable<CategoryReadDto>>(categories);
 
            

@@ -59,6 +59,38 @@ namespace Catalog.API.Application.Services
 
             return _mapper.Map<UploadedFiles>(files);
         }
+         public async Task<UploadedFiles> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        {
+
+            var result = await _repositoryManager.UploadRepository.GetByIdAsync(id, cancellationToken);
+
+            if (result is null)
+            {
+                throw new UserNotFoundException(id);
+            }
+
+            var uploadedFilesDto = _mapper.Map<UploadedFiles>(result);
+            // userDto.Roles = String.Join(",", user.Roles.ToArray().Select(x => x.Name).ToArray());
+
+            return uploadedFilesDto;
+        }
+
+          public async Task DeleteAsync(int id, CancellationToken cancellationToken = default)
+        {
+          
+             var file = await _repositoryManager.UploadRepository.GetByIdAsync(id, cancellationToken);
+            if (file is null)
+            {
+                throw new UserNotFoundException();
+            }
+
+           
+
+                 _repositoryManager.UploadRepository.Delete(file);
+              
+                await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+          
+        }
     
     }
 
