@@ -16,5 +16,8 @@ namespace  Catalog.Domain.Entities
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
          public string FilePath { get; set; }
+         public string Path { get; set; }
+          public IList<Category> Categories { get; } = new List<Category>();
+           public IList<Category> CategoryIcon { get; } = new List<Category>();
     }
 }

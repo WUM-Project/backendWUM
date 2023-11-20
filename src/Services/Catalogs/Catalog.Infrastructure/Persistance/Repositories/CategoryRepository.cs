@@ -29,7 +29,7 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         }
           public async Task<IEnumerable<Category>> FindAllAsync(Expression<Func<Category, bool>> predicate, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Categories.Where(predicate)
+            return await _dbContext.Categories.Include(d => d.UploadedFiles).Include(d=>d.UploadedFileIcon).Where(predicate)
                 .ToListAsync(cancellationToken);
         }
     }

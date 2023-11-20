@@ -54,6 +54,42 @@ namespace Catalog.Infrastructure
             // .HasForeignKey(ptc => ptc.CategoryId).HasPrincipalKey(b => b.Id);
              
             builder.Entity<ProductToAttribute>().HasKey(sc => new { sc.ProductId, sc.AttributeId });
+ 
+
+//  builder.Entity<Category>(entity =>
+// {
+// // Fluent API for column properties
+
+// entity.HasOne(d => d.UploadedFiles)
+//     .WithMany(p => p.Categories)
+//     .HasForeignKey(d => d.ImageId)
+//     .OnDelete(DeleteBehavior.SetNull);
+
+// entity.HasOne(d => d.UploadedFileIcon)
+//     .WithMany(p => p.CategoryIcon)
+//     .HasForeignKey(d => d.IconId)
+//     .OnDelete(DeleteBehavior.SetNull);
+
+ 
+//  });
+
+//            
+
+          
+          builder.Entity<Category>()
+        .HasOne(c => c.UploadedFiles)
+        .WithMany(uf => uf.Categories)
+        .HasForeignKey(c => c.ImageId) // Assuming ImageId is the foreign key in Category
+        .OnDelete(DeleteBehavior.Restrict); // Adjust the delete behavior as needed
+       
+
+        builder.Entity<Category>()
+        .HasOne(c => c.UploadedFileIcon)
+        .WithMany(uf => uf.CategoryIcon)
+        .HasForeignKey(c => c.IconId) // Assuming IconId is the foreign key in Category
+        .OnDelete(DeleteBehavior.Restrict);
+
+            
 
             base.OnModelCreating(builder);
         }

@@ -5,6 +5,14 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{765E4821-FBD7-423E-9DCD-37F901E854E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogs", "Catalogs", "{E5D77A9F-B953-4199-B9B2-11D606E686D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalogs\Catalog.API\Catalog.API.csproj", "{E2C85B7A-49C9-4F83-8DFF-A5BF42328530}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Domain", "Services\Catalogs\Catalog.Domain\Catalog.Domain.csproj", "{6212D653-03CA-4EFB-AB5C-DE775CB0CF51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Infrastructure", "Services\Catalogs\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{08FF9833-4626-4AF7-8D58-C9D21B3A540F}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applicant", "Applicant", "{2AC70764-E36B-4B44-9B3F-6430420D7914}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicant.API", "Services\Applicant\Applicant.API\Applicant.API.csproj", "{32F9F48B-9EA4-4F4B-B769-59E3D3F02424}"

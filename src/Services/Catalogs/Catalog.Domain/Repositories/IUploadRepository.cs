@@ -10,8 +10,9 @@ namespace Catalog.Domain.Repositories
 {
     public interface IUploadRepository
     {
-        
+        Task<UploadedFiles> GetByIdAsync(int id, CancellationToken cancellationToken = default);
          void Insert(UploadedFiles file);
+         void Delete(UploadedFiles file);
 
     }
 }

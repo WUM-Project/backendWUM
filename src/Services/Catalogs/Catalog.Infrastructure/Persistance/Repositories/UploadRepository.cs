@@ -25,8 +25,15 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         {
             _dbContext.UploadedFile.Add(file);
         }
-
-   
+        public void Delete(UploadedFiles file)
+        {
+            _dbContext.UploadedFile.Remove(file);
+        }
+    public async Task<UploadedFiles> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        {
+           return await _dbContext.UploadedFile
+                .FirstOrDefaultAsync(x => x.Id == id);
+        }
 
 }
 }
