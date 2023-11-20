@@ -54,10 +54,190 @@ namespace Catalog.Infrasructure
             //     context.Roles.AddRange(roles);
             //     context.SaveChanges();
             // }
+  if (!context.Marks.Any())
+            {
+                Console.WriteLine("\n--> Seeding Marks Data... \n");
 
+                // var hasher = new PasswordHasher<User>();
+
+
+            
+                var mark1 = new Mark
+                {
+                    Title = "Новинка",
+                    Lang = "uk",
+                    OriginId = 0,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                  var mark2 = new Mark
+                {
+                    Title = "Новинка",
+                    Lang = "ru",
+                    OriginId = 1,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+                context.Marks.Add(mark1);
+                context.Marks.Add(mark2);
+
+                  var mark3 = new Mark
+                {
+                    Title = "Хіт",
+                    Lang = "uk",
+                    OriginId = 0,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                  var mark4 = new Mark
+                {
+                    Title = "Хіт",
+                    Lang = "ru",
+                    OriginId = 3,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+                context.Marks.Add(mark3);
+                context.Marks.Add(mark4);
+                  var mark5 = new Mark
+                {
+                    Title = "Акційне",
+                    Lang = "uk",
+                    OriginId = 0,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                  var mark6 = new Mark
+                {
+                    Title = "Акційне",
+                    Lang = "ru",
+                    OriginId = 5,
+                   Color="942C2C",
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+                context.Marks.Add(mark5);
+                context.Marks.Add(mark6);
+                context.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("\n--> We already have mark data\n");
+            }
+  if (!context.Attributes.Any())
+            {
+                Console.WriteLine("\n--> Seeding Attributes Data... \n");
+
+                // var hasher = new PasswordHasher<User>();
+
+
+            
+                var attribute1 = new Domain.Entities.Attribute
+                {
+                    Title = "SSD",
+                    Lang = "uk",
+                    OriginId = 0,
+                    ShortTitle = "shorttitle",
+                    UnitOfMeasurement= "gb",
+                    Status = 2,
+                    Position= 1,
+                    GroupAttr=1
+                  
+                };
+                var attribute2 =  new Domain.Entities.Attribute
+                {
+                    Title = "SSD",
+                    Lang = "ru",
+                    OriginId = 1,
+                  GroupAttr=1,
+                    Status = 2,
+                    Position= 1,
+                   
+                };
+              
+                context.Attributes.Add(attribute1);
+                context.Attributes.Add(attribute2);
+
+                  var attribute3 = new Domain.Entities.Attribute
+                {
+                    Title = "VideoCard",
+                    Lang = "uk",
+                    OriginId = 0,
+                    ShortTitle = "shorttitle",
+                
+                    GroupAttr=2,
+                    Status = 2,
+                    Position= 1,
+                  
+                };
+                var attribute4 =  new Domain.Entities.Attribute
+                {
+                    Title = "VideoCard",
+                    Lang = "ru",
+                    OriginId = 3,
+                  GroupAttr=2,
+                    Status = 2,
+                    Position= 1,
+                   
+                };
+              
+                context.Attributes.Add(attribute3);
+                context.Attributes.Add(attribute4);
+                  var attribute5 = new Domain.Entities.Attribute
+                {
+                    Title = "Procesor",
+                    Lang = "uk",
+                    OriginId = 0,
+                    ShortTitle = "shorttitle",
+                   
+                    Status = 2,
+                    GroupAttr=3,
+                    Position= 1,
+                  
+                };
+                var attribute6 =  new Domain.Entities.Attribute
+                {
+                    Title = "Procesor",
+                    Lang = "ru",
+                    OriginId = 5,
+                  GroupAttr=3,
+                    Status = 2,
+                    Position= 1,
+                   
+                };
+              
+                context.Attributes.Add(attribute5);
+                context.Attributes.Add(attribute6);
+
+                context.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("\n--> We already have attribute data\n");
+            }
             if (!context.Categories.Any())
             {
-                Console.WriteLine("\n--> Seeding Data... \n");
+                Console.WriteLine("\n--> Seeding Categories Data... \n");
 
                 // var hasher = new PasswordHasher<User>();
 
@@ -137,7 +317,7 @@ namespace Catalog.Infrasructure
                 {
                     Title = "Parent2",
                     Lang = "ru",
-                    OriginId = 3,
+                    OriginId = 5,
                     ParentId = 4,
                     Status = 2,
                     Position= 1,
@@ -149,26 +329,11 @@ namespace Catalog.Infrasructure
                 context.Categories.Add(category5);
                 context.Categories.Add(category6);
 
-
-                //Console.WriteLine($"--->> User1: {user1.Password} ") ;
-
-                //context.UserExams.Add(new UserExams() { User = user1, ExamId = 1 });
-                // context.Users.Add(user2);
-                // context.Users.Add(user3);
-                // context.Users.Add(user4);
-                // context.Users.Add(user5);
-                // context.Users.Add(user6);
-                // context.Users.Add(user7);
-                // context.Users.Add(user8);
-                // context.Users.Add(user9);
-                // context.Users.Add(user10);
-                // context.Users.Add(user11);
-
                 context.SaveChanges();
             }
             else
             {
-                Console.WriteLine("\n--> We already have data\n");
+                Console.WriteLine("\n--> We already have Category data\n");
             }
         }
     }

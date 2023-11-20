@@ -13,23 +13,23 @@ using Catalog.Infrastructure;
 
 namespace Catalog.Infrasructure.Persistance.Repositories
 {
-    internal sealed class CategoryRepository : ICategoryRepository
+    internal sealed class ProductRepository : IProductRepository
     {
         private readonly AppDbContext _dbContext;
-        public CategoryRepository(AppDbContext dbContext)
+        public ProductRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext; 
         }
 
 
-     public async Task<IEnumerable<Category>> GetAllAsync(CancellationToken cancellationToken = default)
+     public async Task<IEnumerable<Product>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Categories
+            return await _dbContext.Products
                 .ToListAsync(cancellationToken);
         }
-          public async Task<IEnumerable<Category>> FindAllAsync(Expression<Func<Category, bool>> predicate, CancellationToken cancellationToken = default)
+          public async Task<IEnumerable<Product>> FindAllAsync(Expression<Func<Product, bool>> predicate, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Categories.Include(d => d.UploadedFiles ).Include(d=>d.UploadedFileIcon).Where(predicate)
+            return await _dbContext.Products.Where(predicate)
                 .ToListAsync(cancellationToken);
         }
     }

@@ -14,6 +14,7 @@ namespace Catalog.Infrasructure.Persistance.Repositories
      
         private readonly Lazy<IUnitOfWork> _lazyUnitOfWork;
        private readonly Lazy<ICategoryRepository> _lazyCategoryRepository;
+       private readonly Lazy<IProductRepository> _lazyProductRepository;
        private readonly Lazy<IUploadRepository> _lazyUploadedFilesRepository;
         public RepositoryManager(AppDbContext dbContext)
         {     
@@ -25,6 +26,7 @@ namespace Catalog.Infrasructure.Persistance.Repositories
             // _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository(dbContext));
             _lazyUnitOfWork = new Lazy<IUnitOfWork>(() => new UnitOfWork(dbContext));
             _lazyCategoryRepository = new Lazy<ICategoryRepository>(() => new CategoryRepository(dbContext));
+            _lazyProductRepository = new Lazy<IProductRepository>(() => new ProductRepository(dbContext));
             _lazyUploadedFilesRepository = new Lazy<IUploadRepository>(() => new UploadRepository(dbContext));
         }
 
@@ -35,6 +37,7 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         // public IUserRepository UserRepository => _lazyUserRepository.Value;
         public IUnitOfWork UnitOfWork => _lazyUnitOfWork.Value;
         public ICategoryRepository CategoryRepository => _lazyCategoryRepository.Value;
+        public IProductRepository ProductRepository => _lazyProductRepository.Value;
         public IUploadRepository UploadRepository => _lazyUploadedFilesRepository.Value;
     }
 

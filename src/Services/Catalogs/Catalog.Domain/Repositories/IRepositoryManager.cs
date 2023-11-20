@@ -7,6 +7,7 @@ namespace Catalog.Domain.Repositories
     {
         
         ICategoryRepository CategoryRepository { get; }
+        IProductRepository ProductRepository { get; }
         IUploadRepository UploadRepository { get; }
          IUnitOfWork UnitOfWork { get; }
     }
