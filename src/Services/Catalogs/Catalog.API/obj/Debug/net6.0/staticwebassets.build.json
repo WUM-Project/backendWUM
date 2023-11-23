@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B+6Qcs2k72dotPnU/QtfOKogiJkdeUjJcHdOsLNhtew=",
+  "Hash": "KMN/if3UKl12X9/kf4VjkT7LQqm5lgK+VcHwHtjoRMw=",
   "Source": "Catalog.API",
   "BasePath": "_content/Catalog.API",
   "Mode": "Default",
@@ -627,6 +627,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\product\\team1.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\productviews\\carrier_block_gallery_2_20231123191635856.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/productviews/carrier_block_gallery_2_20231123191635856.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\productviews\\carrier_block_gallery_2_20231123191635856.jpg"
+    },
+    {
+      "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\productviews\\services_block_10_20231123193655832.jpg",
+      "SourceId": "Catalog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\",
+      "BasePath": "_content/Catalog.API",
+      "RelativePath": "Uploads/productviews/services_block_10_20231123193655832.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\productviews\\services_block_10_20231123193655832.jpg"
     },
     {
       "Identity": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.API\\wwwroot\\Uploads\\test\\3d-1.jpg",

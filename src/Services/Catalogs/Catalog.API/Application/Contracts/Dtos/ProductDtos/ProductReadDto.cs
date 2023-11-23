@@ -27,12 +27,13 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
 
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
 
-       
-            public ICollection<ProductToMark>  Marks  { get; set; } =  new List<ProductToMark>();
-            public ICollection<ProductToAttribute>  Attributes  { get; set; }
-            public ICollection<ProductToCategory>  Categories  { get; set; }= new List<ProductToCategory>();
+       public UploadedFiles UploadedFiles {get;set;}
+            public IEnumerable<ProductToMark>  Marks  { get; set; }
+            public IEnumerable<ProductToAttribute>  Attributes  { get; set; }
+            public IEnumerable<ProductToCategory>  Categories  { get; set; }= new List<ProductToCategory>();
     
 
     }
+    
 
 }
