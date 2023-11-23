@@ -28,10 +28,13 @@ public  class Product
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
+           public UploadedFiles UploadedFiles;
 
-       
-            public ICollection<ProductToMark>  Marks  { get; set; } =  new List<ProductToMark>();
+        [JsonIgnore]
+            public ICollection<ProductToMark>  Marks  { get; set; } 
+             [JsonIgnore]
             public ICollection<ProductToAttribute>  Attributes  { get; set; }
+             [JsonIgnore]
             public ICollection<ProductToCategory>  Categories  { get; set; }= new List<ProductToCategory>();
          
     }

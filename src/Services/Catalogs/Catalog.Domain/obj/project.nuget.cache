@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sx4m5vqqwuViTgWJuLXeqLS8s+0zfg1mtdokR4YN6Op1GGgUuGzoNKIX+DGRyPaEBjYQzCmi0SIJ7XrreePUUw==",
+  "dgSpecHash": "S1SPto/J+eioI8FWMHYF18ryKdAd954zWeCFKlLbC7tvH9n3Q4i6AdaW5hz7FOu24CmnE57XMAl9ylGHNhz+ig==",
   "success": true,
-  "projectFilePath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
+  "projectFilePath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

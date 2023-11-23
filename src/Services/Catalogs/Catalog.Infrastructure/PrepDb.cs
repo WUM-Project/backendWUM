@@ -245,7 +245,7 @@ namespace Catalog.Infrasructure
             
                 var category1 = new Category
                 {
-                    Title = "Parent1",
+                    Title = "Товари для дому",
                     Lang = "uk",
                     OriginId = 0,
                     ParentId = 0,
@@ -257,7 +257,7 @@ namespace Catalog.Infrasructure
                 };
                 var category2 = new Category
                 {
-                    Title = "Parent1",
+                    Title = "Товари для дому",
                     Lang = "ru",
                     OriginId = 1,
                     ParentId = 0,
@@ -275,7 +275,7 @@ namespace Catalog.Infrasructure
                 
                 var category3 = new Category
                 {
-                    Title = "Parent2",
+                    Title = "Комп'ютери та ноутбуки",
                     Lang = "uk",
                     OriginId = 0,
                     ParentId = 0,
@@ -287,7 +287,7 @@ namespace Catalog.Infrasructure
                 };
                 var category4 = new Category
                 {
-                    Title = "Parent2",
+                    Title = "Комп'ютери та ноутбуки",
                     Lang = "ru",
                     OriginId = 3,
                     ParentId = 0,
@@ -303,10 +303,10 @@ namespace Catalog.Infrasructure
                
                 var category5 = new Category
                 {   
-                    Title = "Parent2",
+                    Title = "Смартфони, ТВ і електроніка",
                     Lang = "uk",
                     OriginId = 0,
-                    ParentId = 3,
+                    ParentId = 0,
                     Status = 2,
                     Position= 1,
                     //CreatedAt = new DateTimeOffset(DateTime.Now),
@@ -315,7 +315,7 @@ namespace Catalog.Infrasructure
                 };
                 var category6 = new Category
                 {
-                    Title = "Parent2",
+                    Title = "Смартфони, ТВ і електроніка",
                     Lang = "ru",
                     OriginId = 5,
                     ParentId = 4,
@@ -334,6 +334,494 @@ namespace Catalog.Infrasructure
             else
             {
                 Console.WriteLine("\n--> We already have Category data\n");
+            }
+
+
+            if (!context.Products.Any())
+            {
+                Console.WriteLine("\n--> Seeding Products Data... \n");
+
+                // var hasher = new PasswordHasher<User>();
+
+
+            
+                var product1 = new Product
+                {
+                    Name = "Ноутбук Acer Nitro 5 AN515-46-R1SB Black",
+                    Description = "Домінуйте в іграх завдяки поєднаною потіжністю AMD Ryzen серії 6000",
+                    ShortDescription = "Новинка",
+                    Sku = "394195905",
+                    Price = 69229,
+                    DiscountedPrice = 72699,
+                    Quantity = 100,
+                    Lang = "uk",
+                    OriginId = 0,
+                 
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                var product2 = new Product
+                {
+                    Name = "Ноутбук Acer Nitro 5 AN515-46-R1SB Black",
+                    Description = "Домінуйте в іграх завдяки поєднаною потіжністю AMD Ryzen серії 6000",
+                    ShortDescription = "Новинка",
+                    Sku = "394195905",
+                    Price = 69229,
+                    DiscountedPrice = 72699,
+                    Quantity = 100,
+                    Lang = "ru",
+                    OriginId = 1,
+                 
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+              
+                context.Products.Add(product1);
+                context.Products.Add(product2);
+              
+                var product3 = new Product
+                {
+                    Name = "Ноутбук Lenovo IdeaPad 3 15IAU7 (82RK00TWRA) Arctic Grey ",
+                    Description = "Компактний, але при цьому високопродуктивний ноутбук Зберігайте підключення до мережі інтернет у будь-якому місці за допомогою надзвичайно тонкого ноутбука IdeaPad 3 (7th Gen, 15, Intel). Він завантажується за лічені секунди завдяки функції Flip to Start, для увімкнення якої досить підняти кришку ноутбука, та оснащений надефективним процесором Intel, що дає змогу з легкістю працювати в багатозадачному режимі.",
+                    ShortDescription = "Новинка",
+                    Sku = "379981179",
+                    Price = 27999,
+                    DiscountedPrice = 21499,
+                    Quantity = 100,
+                    Lang = "uk",
+                    OriginId = 0,
+                 
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                var product4 = new Product
+                {
+                    Name = "Ноутбук Lenovo IdeaPad 3 15IAU7 (82RK00TWRA) Arctic Grey ",
+                     Description = "Компактний, але при цьому високопродуктивний ноутбук Зберігайте підключення до мережі інтернет у будь-якому місці за допомогою надзвичайно тонкого ноутбука IdeaPad 3 (7th Gen, 15, Intel). Він завантажується за лічені секунди завдяки функції Flip to Start, для увімкнення якої досить підняти кришку ноутбука, та оснащений надефективним процесором Intel, що дає змогу з легкістю працювати в багатозадачному режимі.",
+                    ShortDescription = "Новинка",
+                    Sku = "379981179",
+                    Price = 27999,
+                    DiscountedPrice = 21499,
+                    Quantity = 100,
+                    Lang = "ru",
+                    OriginId = 3,
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+              
+                context.Products.Add(product3);
+                context.Products.Add(product4);
+                var product5 = new Product
+                {
+                    Name = "Ноутбук Acer Predator Helios 300 PH315-55-74TY (NH.QGNEU.005) Abyssal Black",
+                    Description = "дягніть екіпірування, пристебніть ремені — і нехай Helios прокладе шлях. Цей ігровий ноутбук обладнаний чудовою технологією охолодження, неймовірно швидким дисплеєм і рядом функцій для покращення продуктивності, тому стане вашим путівником для насолоди від ігор. За підтримки процесора Intel Core 12-го покоління та відеокарти NVIDIA GeForce RTX.  ",
+                    ShortDescription = "Новинка",
+                    Sku = "379981179",
+                    Price = 69999,
+                    DiscountedPrice = 52999,
+                    Quantity = 100,
+                    Lang = "uk",
+                    OriginId = 0,
+                 
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+                var product6 = new Product
+                {
+                    Name = "Ноутбук Acer Predator Helios 300 PH315-55-74TY (NH.QGNEU.005) Abyssal Black",
+                     Description = "дягніть екіпірування, пристебніть ремені — і нехай Helios прокладе шлях. Цей ігровий ноутбук обладнаний чудовою технологією охолодження, неймовірно швидким дисплеєм і рядом функцій для покращення продуктивності, тому стане вашим путівником для насолоди від ігор. За підтримки процесора Intel Core 12-го покоління та відеокарти NVIDIA GeForce RTX.  ",
+                    ShortDescription = "Новинка",
+                    Sku = "379981179",
+                    Price = 69999,
+                    DiscountedPrice = 52999,
+                    Quantity = 100,
+                    Lang = "ru",
+                    OriginId = 3,
+                    Status = 2,
+                    Position= 1,
+                 
+                  
+                };
+              
+              
+                context.Products.Add(product5);
+                context.Products.Add(product6);
+              
+
+             
+              
+               
+                context.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("\n--> We already have Products data\n");
+            }
+            if (!context.ProductToCategories.Any())
+            {
+                Console.WriteLine("\n--> Seeding ProductToCategories Data... \n");
+
+                // var hasher = new PasswordHasher<User>();
+
+
+            
+                var productTocategory = new ProductToCategory
+                {
+                   
+                 ProductId= 1,
+                 CategoryId=3,
+                  
+                };
+                var productTocategory2 = new ProductToCategory
+                {
+                   
+                 ProductId= 2,
+                 CategoryId=4,
+                  
+                };
+                
+              
+              
+                context.ProductToCategories.Add(productTocategory);
+                context.ProductToCategories.Add(productTocategory2);
+                var productTocategory3 = new ProductToCategory
+                {
+                   
+                 ProductId= 3,
+                 CategoryId=3,
+                  
+                };
+                var productTocategory4 = new ProductToCategory
+                {
+                   
+                 ProductId= 4,
+                 CategoryId=4,
+                  
+                };
+                
+              
+              
+                context.ProductToCategories.Add(productTocategory3);
+                context.ProductToCategories.Add(productTocategory4);
+                var productTocategory5 = new ProductToCategory
+                {
+                   
+                 ProductId= 5,
+                 CategoryId=3,
+                  
+                };
+                var productTocategory6 = new ProductToCategory
+                {
+                   
+                 ProductId= 6,
+                 CategoryId=4,
+                  
+                };
+                
+              
+              
+                context.ProductToCategories.Add(productTocategory5);
+                context.ProductToCategories.Add(productTocategory6);
+                
+              
+              
+
+             
+              
+               
+                context.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("\n--> We already have ProductToCategories data\n");
+            }
+            // if (!context.ProductToAttributes.Any())
+            // {
+            //     Console.WriteLine("\n--> Seeding ProductToAttributes Data... \n");
+
+            //     // var hasher = new PasswordHasher<User>();
+
+
+            
+            //     var product1Toattribute = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 1,
+            //      Value="1TB",
+            //      AttributeId=1,
+                  
+            //     };
+            //     var product1Toattribute2 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 2,
+            //      Value="1TB",
+            //      AttributeId=2,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product1Toattribute);
+            //     context.ProductToAttributes.Add(product1Toattribute2);
+            //     var product1Toattribute3 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 1,
+            //      Value="GeForse RTX 3070 TI",
+            //      AttributeId=3,
+                  
+            //     };
+            //     var product1Toattribute4 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 2,
+            //      Value="GeForse RTX 3070 TI",
+            //      AttributeId=4,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product1Toattribute3);
+            //     context.ProductToAttributes.Add(product1Toattribute4);
+           
+            //     var product1Toattribute5 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 1,
+            //      Value="Восьмиядерий AMD Ryzen 7 6800H (3.2-4.7 Гц)",
+            //      AttributeId=5,
+                  
+            //     };
+            //     var product1Toattribute6 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 2,
+            //      Value="Восьмиядерий AMD Ryzen 7 6800H (3.2-4.7 Гц)",
+            //      AttributeId=6,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product1Toattribute5);
+            //     context.ProductToAttributes.Add(product1Toattribute6);
+           
+                
+            //     var product2Toattribute = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 3,
+            //      Value="512 ГБ",
+            //      AttributeId=1,
+                  
+            //     };
+            //     var product2Toattribute2 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 4,
+            //      Value="512 ГБ",
+            //      AttributeId=2,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product2Toattribute);
+            //     context.ProductToAttributes.Add(product2Toattribute2);
+            //     var product2Toattribute3 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 3,
+            //      Value="Інтегрована Iris Xe Graphics",
+            //      AttributeId=3,
+                  
+            //     };
+            //     var product2Toattribute4 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 4,
+            //      Value="Інтегрована Iris Xe Graphics",
+            //      AttributeId=4,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product2Toattribute3);
+            //     context.ProductToAttributes.Add(product2Toattribute4);
+           
+            //     var product2Toattribute5 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 3,
+            //      Value="Десятиядерний Intel Core i5-1235U (0.9 - 4.4 ГГц)",
+            //      AttributeId=5,
+                  
+            //     };
+            //     var product2Toattribute6 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 4,
+            //      Value="Десятиядерний Intel Core i5-1235U (0.9 - 4.4 ГГц)",
+            //      AttributeId=6,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product2Toattribute5);
+            //     context.ProductToAttributes.Add(product2Toattribute6);
+              
+            //     var product3Toattribute = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 5,
+            //      Value="512 ГБ",
+            //      AttributeId=1,
+                  
+            //     };
+            //     var product3Toattribute2 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 6,
+            //      Value="512 ГБ",
+            //      AttributeId=2,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product3Toattribute);
+            //     context.ProductToAttributes.Add(product3Toattribute2);
+            //     var product3Toattribute3 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 5,
+            //      Value="GeForce RTX 3070",
+            //      AttributeId=3,
+                  
+            //     };
+            //     var product3Toattribute4 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 6,
+            //      Value="GeForce RTX 3070",
+            //      AttributeId=4,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product3Toattribute3);
+            //     context.ProductToAttributes.Add(product3Toattribute4);
+           
+            //     var product3Toattribute5 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 5,
+            //      Value="Чотирнадцятиядерний Intel Core i7-12700H (2.3 - 4.7 ГГц)",
+            //      AttributeId=5,
+                  
+            //     };
+            //     var product3Toattribute6 = new ProductToAttribute
+            //     {
+                   
+            //      ProductId= 6,
+            //      Value="Чотирнадцятиядерний Intel Core i7-12700H (2.3 - 4.7 ГГц)",
+            //      AttributeId=6,
+                  
+            //     };
+                
+              
+              
+            //     context.ProductToAttributes.Add(product3Toattribute5);
+            //     context.ProductToAttributes.Add(product3Toattribute6);
+           
+                
+              
+              
+
+             
+              
+               
+            //     context.SaveChanges();
+            // }
+            // else
+            // {
+            //     Console.WriteLine("\n--> We already have ProductToAttributes data\n");
+            // }
+             if (!context.ProductToMarks.Any())
+            {
+                Console.WriteLine("\n--> Seeding ProductToMarks Data... \n");
+
+                // var hasher = new PasswordHasher<User>();
+
+
+            
+                var productTomark = new ProductToMark
+                {
+                   
+                 ProductId= 1,
+                 MarkId=1,
+                  
+                };
+                var productTomark2 = new ProductToMark
+                {
+                   
+                 ProductId= 2,
+                 MarkId=2,
+                  
+                };
+                
+              
+              
+                context.ProductToMarks.Add(productTomark);
+                context.ProductToMarks.Add(productTomark2);
+                var productTomark3 = new ProductToMark
+                {
+                   
+                 ProductId= 3,
+                 MarkId=3,
+                  
+                };
+                var productTomark4 = new ProductToMark
+                {
+                   
+                 ProductId= 4,
+                 MarkId=4,
+                  
+                };
+                
+              
+              
+                context.ProductToMarks.Add(productTomark3);
+                context.ProductToMarks.Add(productTomark4);
+              
+              
+              
+
+             
+              
+               
+                context.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("\n--> We already have ProductToMarks data\n");
             }
         }
     }

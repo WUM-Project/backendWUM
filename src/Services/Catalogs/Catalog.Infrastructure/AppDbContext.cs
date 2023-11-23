@@ -30,7 +30,7 @@ namespace Catalog.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-           builder.Entity<ProductToMark>().ToTable("ProductToMark");
+           builder.Entity<ProductToMark>().ToTable("ProductToMarks");
             builder.Entity<Product>().HasMany(x => x.Marks).WithOne(x => x.Product).OnDelete(DeleteBehavior.Cascade);
             builder.Entity<ProductToMark>().HasKey(sc => new { sc.ProductId, sc.MarkId });
             builder.Entity<ProductToCategory>().HasKey(sc => new { sc.ProductId, sc.CategoryId });
@@ -75,7 +75,12 @@ namespace Catalog.Infrastructure
 
 //            
 
-          
+            builder.Entity<Product>()
+        .HasOne(c => c.UploadedFiles)
+        .WithMany(uf => uf.Products)
+        .HasForeignKey(c => c.ImageId) // Assuming ImageId is the foreign key in Category
+        .OnDelete(DeleteBehavior.Restrict); // Adjust the delete behavior as needed 
+        
           builder.Entity<Category>()
         .HasOne(c => c.UploadedFiles)
         .WithMany(uf => uf.Categories)

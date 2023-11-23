@@ -28,7 +28,10 @@ namespace Catalog.Domain.Entities
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
-        public IList<ProductToCategory>  Products  { get; set; }
+
+         [JsonIgnore]
+        public ICollection<ProductToCategory>  Products  { get; set; }
+        // public IList<ProductToCategory>  Products  { get; set; }
 
         
         // public IList<Category> Children {get;set;}
