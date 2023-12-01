@@ -79,10 +79,169 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         }
           public async Task<IEnumerable<Product>> FindAllAsync(Expression<Func<Product, bool>> predicate, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Products.Where(predicate)
-                .ToListAsync(cancellationToken);
+           
+            var products = await _dbContext.Products.Include(d => d.UploadedFiles)
+        .Where(predicate)
+        .ToListAsync(cancellationToken);
+
+    foreach (var product in products)
+    {
+        // Підєднати залежності для кожного продукту
+        await _dbContext.Entry(product)
+            .Collection(d => d.Categories)
+            .LoadAsync(cancellationToken);
+
+        await _dbContext.Entry(product)
+            .Collection(d => d.Marks)
+            .LoadAsync(cancellationToken);
+             // Перевірити, чи є об'єкт marks і mark, і встановити mark, якщо вони не null
+ 
+ if (product.Marks != null)
+    {
+        foreach (var mark in product.Marks)
+        {
+            if (mark != null)
+            {
+                mark.Product = null;
+                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                mark.Mark = await _dbContext.Marks
+                    .Where(m => m.Id == mark.MarkId)
+                    .Select(m => new Mark
+                    {
+                        // Додайте поля, які вам потрібні
+                        Id = m.Id,
+                        Title = m.Title,
+                        Color = m.Color,
+                        // і так далі
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
         }
     }
+ if (product.Categories != null)
+    {
+        foreach (var category in product.Categories)
+        {
+            if (category != null)
+            {
+              
+                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                category.Category = await _dbContext.Categories
+                    .Where(m => m.Id == category.CategoryId)
+                    .Select(m => new Category
+                    {
+                        // Додайте поля, які вам потрібні
+                        Id = m.Id,
+                        Title = m.Title,
+                        Lang = m.Lang,
+                        ParentId = m.ParentId
+                        // і так далі
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
+        // Додати інші пов'язані колекції за необхідності
+    }
+//     // Серіалізувати об'єкти, використовуючи параметр ReferenceHandler.Preserve
+// var json = JsonSerializer.Serialize(products, new JsonSerializerOptions
+// {
+//     ReferenceHandler = ReferenceHandler.Preserve,
+//     WriteIndented = true // Цей параметр додає відступи для зручності читання JSON
+// });
+               return products;
+        }
+public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+{
+    var product = await _dbContext.Products
+        .Include(d => d.UploadedFiles)
+        .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+
+    if (product != null)
+    {
+        // Explicitly load the related collections
+        await _dbContext.Entry(product)
+            .Collection(d => d.Categories)
+            .LoadAsync(cancellationToken);
+
+        await _dbContext.Entry(product)
+            .Collection(d => d.Marks)
+            .LoadAsync(cancellationToken);
+
+        // Add other related collections as needed
+    }
+
+
+    return product;
+}
+    //     public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+    //     {
+    //          var product = await _dbContext.Products.Include(d => d.UploadedFiles).Include(d => d.Categories).Include(d => d.Marks).FirstOrDefaultAsync(e => e.Id == id);
+
+
+    //         // return product;
+    //     //      var product = await _dbContext.Products
+    //     // .Where(e => e.Id == id)
+    //     // .Select(p => new Product
+    //     // {
+    //     //     Id = p.Id,
+    //     //     OriginId = p.OriginId,
+    //     //     Lang = p.Lang,
+    //     //     Status = p.Status,
+    //     //     // ... (include other properties you need)
+
+    //     //     UploadedFiles = new UploadedFiles
+    //     //     {
+    //     //         Id = p.UploadedFiles.Id,
+    //     //         Name = p.UploadedFiles.Name,
+    //     //        FilePath = p.UploadedFiles.FilePath
+
+             
+    //     //     },
+    //     //     Categories = new Category
+    //     //     {
+    //     //         Id = p.
+    //     //         Title = p.UploadedFiles.Name,
+    //     //        FilePath = p.UploadedFiles.FilePath
+
+             
+    //     //     },
+
+    //     //     // Exclude other properties like Marks, Attributes, Categories, etc.
+
+    //     // })
+    //     // .FirstOrDefaultAsync(cancellationToken);
+      
+    //   //current
+    //     // var product = await _dbContext.Products
+      
+    //     // .Where(e => e.Id == id)
+    //     // .Select(p => new Product
+    //     // {
+    //     //     Id = p.Id,
+    //     //     OriginId = p.OriginId,
+    //     //     Lang = p.Lang,
+    //     //     Status = p.Status,
+    //     //     // ... (include other properties you need)
+
+    //     //     UploadedFiles = new UploadedFiles
+    //     //     {
+    //     //         Id = p.UploadedFiles.Id,
+    //     //         Name = p.UploadedFiles.Name,
+    //     //         FilePath = p.UploadedFiles.FilePath
+    //     //     },
+            
+          
+
+    //     //     // Exclude other properties like Marks, Attributes, Categories, etc.
+
+    //     // })
+    //     // .FirstOrDefaultAsync(cancellationToken);
+    //     return product;
+    //     }
+        
+    }
+     
     // public static IList<Category> BuildTree(this IEnumerable<Category> source)
     // {
     //     var groups = source.GroupBy(i => i.ParentId);

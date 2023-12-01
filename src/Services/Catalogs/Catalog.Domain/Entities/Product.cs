@@ -28,7 +28,7 @@ public  class Product
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
 
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
-           public UploadedFiles UploadedFiles;
+           public UploadedFiles UploadedFiles ;
 
         [JsonIgnore]
             public ICollection<ProductToMark>  Marks  { get; set; } 
