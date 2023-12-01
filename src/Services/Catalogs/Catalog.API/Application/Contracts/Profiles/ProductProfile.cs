@@ -14,6 +14,8 @@ namespace Catalog.API.Application.Contracts.Profiles
             // Source -> Targer
             CreateMap<Product, ProductReadDto>();
             CreateMap<ProductReadDto, Product>();
+            CreateMap<Product, ProductCatalogDto>();
+            CreateMap<ProductCatalogDto, Product>();
           
         }
 

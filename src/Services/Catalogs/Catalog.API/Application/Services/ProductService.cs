@@ -54,13 +54,29 @@ namespace Catalog.API.Application.Services
 
             return productDto;
         }
-        public async Task<IEnumerable<ProductReadDto>> FindAllProduct(int ParentId,CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<ProductCatalogDto>> FindAllProduct(Expression<Func<Product, bool>> predicate,CancellationToken cancellationToken = default)
         {
-            var categories = await _repositoryManager.ProductRepository.FindAllAsync(x=>x.ImageId == ParentId );
+            var categories = await _repositoryManager.ProductRepository.FindAllAsync(predicate,cancellationToken);
      
-            var productDto = _mapper.Map<IEnumerable<ProductReadDto>>(categories);
+            var productDto = _mapper.Map<IEnumerable<ProductCatalogDto>>(categories);
 
            
+
+            return productDto;
+        }
+           public async Task<ProductReadDto> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+        {
+
+            var product = await _repositoryManager.ProductRepository.GetByIdAsync(id, cancellationToken);
+
+            if (product is null)
+            {
+                throw new UserNotFoundException(id);
+            }
+
+            var productDto = _mapper.Map<ProductReadDto>(product);
+            
+            // userDto.UploadedFiles = String.Join(",", user.UploadedFiles.ToArray().Select(x => x.Name).ToArray());
 
             return productDto;
         }

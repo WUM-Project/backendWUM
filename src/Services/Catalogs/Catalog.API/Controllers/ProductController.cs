@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 using Catalog.API.Application.Pagginations;
 using Catalog.API.Application.Services.Interfaces;
-
+using System.Linq.Expressions;
+using Catalog.API.Application.Contracts.Dtos.ProductDtos;
+using Catalog.Domain.Entities;
 
 
 namespace Catalog.API.Controllers
@@ -53,25 +55,68 @@ namespace Catalog.API.Controllers
 
             return Ok(result);
         }
+
         [HttpGet]
-        [Route("GetAllProducts")]
-        public async Task<IActionResult> GetChildProducts(int ParentId,
-         CancellationToken cancellationToken = default)
+ [Route("FindAllProducts")]
+public async Task<IActionResult> GetProducts(int page, string filter, int categoryId,  decimal? minPrice,  // Nullable decimal for the minimum price
+    decimal? maxPrice,  // Nullable decimal for the maximum price
+     int middleVal = 10,
+    int cntBetween = 5, int limit = 15,   string sortBy = "newest",  CancellationToken cancellationToken = default)
+{
+    Console.WriteLine("\n---> Getting All Products...");
+    
+     // Оригінальний вираз predicate, який фільтрує за вказаними умовами
+    Expression<Func<Product, bool>> originalPredicate = p =>
+        (String.IsNullOrEmpty(filter) || (p.Name.ToLower() + " " + p.Description.ToLower()).Contains(filter.ToLower()))
+        && (categoryId == 0 || p.Categories.Any(c => c.CategoryId == categoryId))
+        && (!minPrice.HasValue || p.Price >= minPrice.Value)
+        && (!maxPrice.HasValue || p.Price <= maxPrice.Value);
+
+    var products = await  _serviceManager.ProductService.FindAllProduct(originalPredicate, cancellationToken);
+
+    // Застосування додаткових умов фільтрації за категорією, можливо, іншими фільтрами
+
+    if (middleVal <= cntBetween)
+    {
+        return BadRequest(new { Error = "MiddleVal must be more than cntBetween" });
+    }
+       // Додавання сортування
+    switch (sortBy.ToLower())
+    {
+      //фільтр по зростанню ціни 
+        case "price_asc":
+            products = products.OrderBy(p => p.Price);
+            break;
+      //фільтр по спаданню ціни 
+        case "price_desc":
+            products = products.OrderByDescending(p => p.Price);
+            break;
+        case "newest":
+            products = products.OrderByDescending(p => p.CreatedAt); // Assuming there is a CreatedAt property
+            break;
+        default:
+            // Handle other cases or provide a default sorting
+            break;
+    }
+
+    // Використання пагінації для повернення результатів
+    var paginatedProducts = Paggination<ProductCatalogDto>.GetData(currentPage: page, limit: limit, itemsData: products,
+        middleVal: middleVal, cntBetween: cntBetween);
+  // Мапування до ProductReadDto
+    // var productDtos = _mapper.Map<IEnumerable<ProductReadDto>>(paginatedProducts);
+
+    return Ok(paginatedProducts);
+}
+  
+
+          [HttpGet("{id}", Name = "GetProductById")]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> GetUserById(int id, CancellationToken cancellationToken = default)
         {
-            Console.WriteLine("\n---> Getting All Сategories...");
-            var result = await _serviceManager.ProductService.FindAllProduct(ParentId,cancellationToken);
-            string lang ="uk";
-           
-  if (!String.IsNullOrEmpty(lang))
-            {
-           
-              result = result?.Where(x => x.Lang?.Contains(lang.ToLower()) ?? false)?.ToList();
-            }
-         
+            Console.WriteLine($"\n---> Getting product by Id: {id}");
+            var productDto = await _serviceManager.ProductService.GetByIdAsync(id, cancellationToken);
 
-         
-
-            return Ok(result);
+            return Ok(productDto);
         }
     
         
