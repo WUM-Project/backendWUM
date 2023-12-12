@@ -21,6 +21,7 @@ namespace Catalog.Infrastructure
          public DbSet<ProductToMark> ProductToMarks { get; set; }
         public DbSet<ProductToCategory> ProductToCategories { get; set; }
         public DbSet<ProductToAttribute> ProductToAttributes { get; set; }
+           public DbSet<ProductToUploadedFiles> ProductToUploadedFiles { get; set; }
         public DbSet<Catalog.Domain.Entities.Attribute> Attributes { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Mark> Marks { get; set; }
@@ -93,6 +94,15 @@ namespace Catalog.Infrastructure
         .WithMany(uf => uf.CategoryIcon)
         .HasForeignKey(c => c.IconId) // Assuming IconId is the foreign key in Category
         .OnDelete(DeleteBehavior.Restrict);
+
+
+        
+           builder.Entity<ProductToUploadedFiles>().HasKey(sc => new { sc.ProductId, sc.UploadId });
+               builder.Entity<ProductToUploadedFiles>()
+                 .HasOne(ptc => ptc.UploadedFile)
+            .WithMany(c => c.ProductToUploadedFiles)
+            .HasForeignKey(ptc => ptc.UploadId).HasPrincipalKey(c => c.Id);
+
 
             
 

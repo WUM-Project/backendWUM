@@ -36,6 +36,9 @@ public  class Product
             public ICollection<ProductToAttribute>  Attributes  { get; set; }
              [JsonIgnore]
             public ICollection<ProductToCategory>  Categories  { get; set; }= new List<ProductToCategory>();
+              [JsonIgnore]
+
+              public ICollection<ProductToUploadedFiles>  ProductToUploadedFile  { get; set; } 
          
     }
 }

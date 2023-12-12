@@ -20,5 +20,6 @@ namespace  Catalog.Domain.Entities
           public IList<Category> Categories { get; } = new List<Category>();
            public IList<Category> CategoryIcon { get; } = new List<Category>();
                  public IList<Product> Products { get; } = new List<Product>();
+                    public IList<ProductToUploadedFiles>  ProductToUploadedFiles  { get; set; }= new List<ProductToUploadedFiles>();
     }
 }

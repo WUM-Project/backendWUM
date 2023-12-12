@@ -155,20 +155,100 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
 {
     var product = await _dbContext.Products
         .Include(d => d.UploadedFiles)
-        .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+        .FirstOrDefaultAsync(e => e.Id == id);
 
     if (product != null)
     {
-        // Explicitly load the related collections
-        await _dbContext.Entry(product)
+   await _dbContext.Entry(product)
             .Collection(d => d.Categories)
             .LoadAsync(cancellationToken);
 
         await _dbContext.Entry(product)
             .Collection(d => d.Marks)
             .LoadAsync(cancellationToken);
+    
+ await _dbContext.Entry(product)
+            .Collection(p => p.ProductToUploadedFile)
+            .LoadAsync(cancellationToken);
+        // // Explicitly load the related collections
+        // await _dbContext.Entry(product)
+        //     .Collection(d => d.Categories)
+        //     .LoadAsync(cancellationToken);
 
+        // await _dbContext.Entry(product)
+        //     .Collection(d => d.Marks)
+        //     .LoadAsync(cancellationToken);
+           //Витяжка позначок
+         if (product.Marks != null)
+    {
+        foreach (var mark in product.Marks)
+        {
+            if (mark != null)
+            {
+                mark.Product = null;
+                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                mark.Mark = await _dbContext.Marks
+                    .Where(m => m.Id == mark.MarkId)
+                    .Select(m => new Mark
+                    {
+                        // Додайте поля, які вам потрібні
+                        Id = m.Id,
+                        Title = m.Title,
+                        Color = m.Color,
+                        // і так далі
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
+       if (product.Categories != null)
+    {
+        foreach (var category in product.Categories)
+        {
+            if (category != null)
+            {
+              
+                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                category.Category = await _dbContext.Categories
+                    .Where(m => m.Id == category.CategoryId)
+                    .Select(m => new Category
+                    {
+                        // Додайте поля, які вам потрібні
+                        Id = m.Id,
+                        Title = m.Title,
+                        Lang = m.Lang,
+                        ParentId = m.ParentId,
+                        
+                        // і так далі
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
         // Add other related collections as needed
+    if (product.ProductToUploadedFile != null)
+    {
+        foreach (var file in product.ProductToUploadedFile)
+        {
+            if (file.UploadId != null)
+            {
+               
+                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                file.UploadedFile = await _dbContext.UploadedFile
+                    .Where(m => m.Id == file.UploadId)
+                    .Select(m => new UploadedFiles
+                    {
+                        // Додайте поля, які вам потрібні
+                        Id = m.Id,
+                        FilePath = m.FilePath,
+                        Name = m.Name,
+                        // і так далі
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
+   
     }
 
 
