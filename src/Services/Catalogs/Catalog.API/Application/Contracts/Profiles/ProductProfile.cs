@@ -12,7 +12,9 @@ namespace Catalog.API.Application.Contracts.Profiles
         public ProductProfiles()
         {
             // Source -> Targer
-            CreateMap<Product, ProductReadDto>();
+            // CreateMap<Product, ProductReadDto>();
+             CreateMap<Product, ProductReadDto>()
+            .ForMember(dest => dest.ProductToUploadedFiles, opt => opt.MapFrom(src => src.ProductToUploadedFile));
             CreateMap<ProductReadDto, Product>();
             CreateMap<Product, ProductCatalogDto>();
             CreateMap<ProductCatalogDto, Product>();

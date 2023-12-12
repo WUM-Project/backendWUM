@@ -18,7 +18,7 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
         public int Quantity { get; set; } 
         public string Name { get; set; } = null!;
         public string ShortName { get; set; }     
-        public int? Position { get; set; }
+        // public int? Position { get; set; }
         public int? Availability { get; set; }
        
         public int? Popular { get; set; }
@@ -31,6 +31,8 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
             public IEnumerable<ProductToMark>  Marks  { get; set; }
             public IEnumerable<ProductToAttribute>  Attributes  { get; set; }
             public IEnumerable<ProductToCategory>  Categories  { get; set; }
+            public IEnumerable<ProductToUploadedFiles>  ProductToUploadedFiles  { get; set; }
+
             // = new List<ProductToCategory>();
     
 
