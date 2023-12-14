@@ -94,7 +94,7 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         await _dbContext.Entry(product)
             .Collection(d => d.Marks)
             .LoadAsync(cancellationToken);
-             // Перевірити, чи є об'єкт marks і mark, і встановити mark, якщо вони не null
+        
  
  if (product.Marks != null)
     {
@@ -103,16 +103,16 @@ namespace Catalog.Infrasructure.Persistance.Repositories
             if (mark != null)
             {
                 mark.Product = null;
-                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+               
                 mark.Mark = await _dbContext.Marks
                     .Where(m => m.Id == mark.MarkId)
                     .Select(m => new Mark
                     {
-                        // Додайте поля, які вам потрібні
+                      
                         Id = m.Id,
                         Title = m.Title,
                         Color = m.Color,
-                        // і так далі
+                       
                     })
                     .FirstOrDefaultAsync(cancellationToken);
             }
@@ -125,30 +125,25 @@ namespace Catalog.Infrasructure.Persistance.Repositories
             if (category != null)
             {
               
-                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                
                 category.Category = await _dbContext.Categories
                     .Where(m => m.Id == category.CategoryId)
                     .Select(m => new Category
                     {
-                        // Додайте поля, які вам потрібні
+                      
                         Id = m.Id,
                         Title = m.Title,
                         Lang = m.Lang,
                         ParentId = m.ParentId
-                        // і так далі
+                   
                     })
                     .FirstOrDefaultAsync(cancellationToken);
             }
         }
     }
-        // Додати інші пов'язані колекції за необхідності
+        
     }
-//     // Серіалізувати об'єкти, використовуючи параметр ReferenceHandler.Preserve
-// var json = JsonSerializer.Serialize(products, new JsonSerializerOptions
-// {
-//     ReferenceHandler = ReferenceHandler.Preserve,
-//     WriteIndented = true // Цей параметр додає відступи для зручності читання JSON
-// });
+
                return products;
         }
 public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationToken = default)
@@ -159,6 +154,9 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
 
     if (product != null)
     {
+         await _dbContext.Entry(product)
+            .Collection(p => p.Attributes)
+            .LoadAsync(cancellationToken);
    await _dbContext.Entry(product)
             .Collection(d => d.Categories)
             .LoadAsync(cancellationToken);
@@ -170,14 +168,33 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
  await _dbContext.Entry(product)
             .Collection(p => p.ProductToUploadedFile)
             .LoadAsync(cancellationToken);
-        // // Explicitly load the related collections
-        // await _dbContext.Entry(product)
-        //     .Collection(d => d.Categories)
-        //     .LoadAsync(cancellationToken);
+   
 
-        // await _dbContext.Entry(product)
-        //     .Collection(d => d.Marks)
-        //     .LoadAsync(cancellationToken);
+      //Витяжка аттрибутів
+         if (product.Attributes != null)
+    {
+        foreach (var item in product.Attributes)
+        {
+            if (item != null)
+            {
+                item.Product = null;
+                
+                item.Attribute = await _dbContext.Attributes
+                    .Where(m => m.Id == item.AttributeId)
+                    .Select(m => new Catalog.Domain.Entities.Attribute
+                    {
+                        
+                        Id = m.Id,
+                        Title = m.Title,
+                        ShortTitle = m.ShortTitle,
+                        UnitOfMeasurement = m.UnitOfMeasurement,
+                        GroupAttr = m.GroupAttr,
+                     
+                    })
+                    .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
            //Витяжка позначок
          if (product.Marks != null)
     {
@@ -186,16 +203,16 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
             if (mark != null)
             {
                 mark.Product = null;
-                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+                
                 mark.Mark = await _dbContext.Marks
                     .Where(m => m.Id == mark.MarkId)
                     .Select(m => new Mark
                     {
-                        // Додайте поля, які вам потрібні
+                        
                         Id = m.Id,
                         Title = m.Title,
                         Color = m.Color,
-                        // і так далі
+                     
                     })
                     .FirstOrDefaultAsync(cancellationToken);
             }
@@ -208,18 +225,18 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
             if (category != null)
             {
               
-                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+               
                 category.Category = await _dbContext.Categories
                     .Where(m => m.Id == category.CategoryId)
                     .Select(m => new Category
                     {
-                        // Додайте поля, які вам потрібні
+                      
                         Id = m.Id,
                         Title = m.Title,
                         Lang = m.Lang,
                         ParentId = m.ParentId,
                         
-                        // і так далі
+                      
                     })
                     .FirstOrDefaultAsync(cancellationToken);
             }
@@ -233,16 +250,16 @@ public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationTo
             if (file.UploadId != null)
             {
                
-                // Замініть цей блок коду залежно від вашої логіки створення об'єкта mark за його ідентифікатором markId
+              
                 file.UploadedFile = await _dbContext.UploadedFile
                     .Where(m => m.Id == file.UploadId)
                     .Select(m => new UploadedFiles
                     {
-                        // Додайте поля, які вам потрібні
+                        
                         Id = m.Id,
                         FilePath = m.FilePath,
                         Name = m.Name,
-                        // і так далі
+                      
                     })
                     .FirstOrDefaultAsync(cancellationToken);
             }

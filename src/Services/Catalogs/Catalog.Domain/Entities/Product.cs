@@ -31,9 +31,9 @@ public  class Product
            public UploadedFiles UploadedFiles ;
 
         [JsonIgnore]
-            public ICollection<ProductToMark>  Marks  { get; set; } 
+            public ICollection<ProductToMark>  Marks  { get; set; } =new List<ProductToMark>();
              [JsonIgnore]
-            public ICollection<ProductToAttribute>  Attributes  { get; set; }
+            public ICollection<ProductToAttribute>  Attributes  { get; set; } =new List<ProductToAttribute>();
              [JsonIgnore]
             public ICollection<ProductToCategory>  Categories  { get; set; }= new List<ProductToCategory>();
               [JsonIgnore]
