@@ -13,6 +13,7 @@ using Catalog.API.Application.Exceptions;
 using Catalog.API.Application.Configurations;
 using Catalog.API.Application.Services.Interfaces;
 using Catalog.API.Application.Contracts.Dtos.ProductDtos;
+using Catalog.API.Application.Contracts.Dtos.AttributeDtos;
 
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
@@ -44,6 +45,16 @@ namespace Catalog.API.Application.Services
             // _reportGrpcService = reportGrpcService;
             // _examGrpcService = examGrpcService;
         }
+        public async Task<IEnumerable<AttributeReadDto>> GetAllAttributesAsync(CancellationToken cancellationToken = default)
+        {
+            var categories = await _repositoryManager.ProductRepository.GetAllAttributesAsync(cancellationToken);
+       
+            var productDto = _mapper.Map<IEnumerable<AttributeReadDto>>(categories);
+
+           
+
+            return productDto;
+        }
         public async Task<IEnumerable<ProductReadDto>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             var categories = await _repositoryManager.ProductRepository.GetAllAsync(cancellationToken);
@@ -58,9 +69,29 @@ namespace Catalog.API.Application.Services
         {
             var categories = await _repositoryManager.ProductRepository.FindAllAsync(predicate,cancellationToken);
      
-            var productDto = _mapper.Map<IEnumerable<ProductCatalogDto>>(categories);
+           var productDtos = categories.Select(p => new ProductCatalogDto
+{
+    Id = p.Id,
+    OriginId = p.OriginId,
+    Lang = p.Lang,
+    Status = p.Status,
+    Price = p.Price,
+    DiscountedPrice = p.DiscountedPrice,
+    Name = p.Name,
+    Popular = p.Popular,
+    ImageId = p.ImageId,
+    CreatedAt = p.CreatedAt,
+    UploadedFiles = p.UploadedFiles,
+    Marks = p.Marks,
+    Categories = p.Categories,
+    Attributes = p.Attributes.Select(attr => new AttributeProductDto
+    {
+        AttributeId = attr.AttributeId,
+        Value = attr.Value
+    }).ToList()
+});
 
-           
+            var productDto = _mapper.Map<IEnumerable<ProductCatalogDto>>(productDtos);
 
             return productDto;
         }

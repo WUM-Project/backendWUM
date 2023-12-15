@@ -13,6 +13,7 @@ using Catalog.API.Application.Pagginations;
 using Catalog.API.Application.Services.Interfaces;
 using System.Linq.Expressions;
 using Catalog.API.Application.Contracts.Dtos.ProductDtos;
+using Catalog.API.Application.Contracts.Dtos.AttributeDtos;
 using Catalog.Domain.Entities;
 
 
@@ -55,32 +56,84 @@ namespace Catalog.API.Controllers
 
             return Ok(result);
         }
+        [HttpGet]
+   [Route("AttributeFilters")]
+        public async Task<IActionResult> GetAllAttributes(
+         CancellationToken cancellationToken = default)
+        {
+       
+            Console.WriteLine("\n---> Getting All Product...");
+          
+            var result = await _serviceManager.ProductService.GetAllAttributesAsync(cancellationToken);
+            string lang ="uk";
+             Console.WriteLine(result);
+                if (!String.IsNullOrEmpty(lang))
+            {
+           
+              result = result?.Where(x => x.Lang?.Contains(lang.ToLower()) ?? false)?.ToList();
+            }
+         
+
+
+
+            return Ok(result);
+        }
 
         [HttpGet]
  [Route("FindAllProducts")]
-public async Task<IActionResult> GetProducts(int page, string filter, int categoryId,  decimal? minPrice,  // Nullable decimal for the minimum price
+public async Task<IActionResult> GetProducts(int page, string filter, string? attributeIds,
+    string? attributeValues,int categoryId,  decimal? minPrice,  // Nullable decimal for the minimum price
     decimal? maxPrice,  // Nullable decimal for the maximum price
      int middleVal = 10,
-    int cntBetween = 5, int limit = 15,   string sortBy = "newest",  CancellationToken cancellationToken = default)
+    int cntBetween = 5, int limit = 15,   string sortBy = "newest", 
+  
+    CancellationToken cancellationToken = default)
 {
     Console.WriteLine("\n---> Getting All Products...");
-    
+    // Збір пар ідентифікаторів та значень атрибутів у масив
+    List<AttributeProductDto> attributes = new List<AttributeProductDto>();
+      List<int> parsedAttributeIds = attributeIds?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
+   List<string> parsedAttributeValues = attributeValues?.Split(',').ToList() ?? new List<string>();
+    if (parsedAttributeIds.Count > 0 && parsedAttributeValues.Count > 0)
+    {
+        attributes = parsedAttributeIds
+            .Zip(parsedAttributeValues, (id, value) => new AttributeProductDto { AttributeId = id, Value = value })
+            .ToList();
+    }
+     Console.WriteLine(attributes);
      // Оригінальний вираз predicate, який фільтрує за вказаними умовами
     Expression<Func<Product, bool>> originalPredicate = p =>
         (String.IsNullOrEmpty(filter) || (p.Name.ToLower() + " " + p.Description.ToLower()).Contains(filter.ToLower()))
         && (categoryId == 0 || p.Categories.Any(c => c.CategoryId == categoryId))
         && (!minPrice.HasValue || p.Price >= minPrice.Value)
         && (!maxPrice.HasValue || p.Price <= maxPrice.Value);
+  string lang ="uk";
+           
+ 
 
     var products = await  _serviceManager.ProductService.FindAllProduct(originalPredicate, cancellationToken);
-
+ if (!String.IsNullOrEmpty(lang))
+            {
+           
+              products = products?.Where(x => x.Lang?.Contains(lang.ToLower()) ?? false)?.ToList();
+            }
+      if(attributes!= null && attributes.Count>0){
+      
+//       products =   products.Where(p =>
+//     attributes.Any(attr => p.Attributes.Any(a => a.AttributeId == attr.AttributeId && a.Value == attr.Value))
+// );
+      products =    products.Where(p =>
+    attributes.All(attr => p.Attributes.Any(a => a.AttributeId == attr.AttributeId && a.Value == attr.Value))
+).Select(p => p);
     // Застосування додаткових умов фільтрації за категорією, можливо, іншими фільтрами
-
+      }
     if (middleVal <= cntBetween)
     {
         return BadRequest(new { Error = "MiddleVal must be more than cntBetween" });
     }
-       // Додавання сортування
+   
+
+    //    Додавання сортування
     switch (sortBy.ToLower())
     {
       //фільтр по зростанню ціни 

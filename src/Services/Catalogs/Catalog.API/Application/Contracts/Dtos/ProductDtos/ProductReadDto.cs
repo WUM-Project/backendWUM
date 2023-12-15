@@ -33,6 +33,8 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
             public IEnumerable<ProductToCategory>  Categories  { get; set; }
             public IEnumerable<ProductToUploadedFiles>  ProductToUploadedFiles  { get; set; }
 
+            
+
             // = new List<ProductToCategory>();
     
 

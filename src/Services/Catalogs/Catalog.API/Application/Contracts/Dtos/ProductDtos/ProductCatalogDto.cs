@@ -1,5 +1,6 @@
 using System;
 using Catalog.Domain.Entities;
+using Catalog.API.Application.Contracts.Dtos.AttributeDtos;
 namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
 {
     public class ProductCatalogDto
@@ -28,10 +29,11 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
 
        public UploadedFiles UploadedFiles {get;set;}
             public IEnumerable<ProductToMark>  Marks  { get; set; }
-            public IEnumerable<ProductToAttribute>  Attributes  { get; set; }
+            // public IEnumerable<ProductToAttribute>  Attributes  { get; set; }
             public IEnumerable<ProductToCategory>  Categories  { get; set; }
             // = new List<ProductToCategory>();
     
+    public List<AttributeProductDto> Attributes { get; set; }
 
     }
     
