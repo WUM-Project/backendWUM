@@ -20,30 +20,42 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         {
             _dbContext = dbContext; 
         }
+ public async Task<IEnumerable<Catalog.Domain.Entities.Attribute>> GetAllAttributesAsync(CancellationToken cancellationToken = default)
+        {
 
+    
+        var products = await _dbContext.Attributes
+        
+        .ToListAsync(cancellationToken);
+
+    return products.Select(p => new Catalog.Domain.Entities.Attribute
+    {
+        Id = p.Id,
+        OriginId = p.OriginId,
+        Lang = p.Lang,
+        Status = p.Status,
+       Title = p.Title
+    });
+     
+        }
+ public async Task<IEnumerable<Product>> GetMinMaxPriceAsync(CancellationToken cancellationToken = default)
+        {
+
+    
+       var prices = await _dbContext.Products
+                // .Select(p => new
+                // {
+                //     MaxPrice = p.Max(pv => pv.Price),
+                //     MinPrice = p.Min(pv => pv.Price)
+                // })
+            .ToListAsync();
+            return prices;
+     
+        }
 
      public async Task<IEnumerable<Product>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-//             var products = await _dbContext.Products
-//         .Select(p => new
-//         {
-//             Product = p,
-//             Categories = p.Categories.Select(pc => pc.Category).ToList()
-//         })
-//         .ToListAsync();
-
-//     // Access the products and their related categories
-//     var productEntities = products?.Select(p => p.Product).ToList();
-//     var categories = products?.SelectMany(p => p.Categories).ToList();
-//  // You can include the categories in the Product entities if needed
-//     foreach (var product in productEntities)
-//     {
-//         var productCategories = products?.FirstOrDefault(p => p.Product == product)?.Categories;
-//         // product.Categories = productCategories?.ToList();;
-//     }
    
-//     return productEntities;
-//      
         var products = await _dbContext.Products
         .Include(p => p.UploadedFiles)
         .ToListAsync(cancellationToken);
@@ -86,6 +98,10 @@ namespace Catalog.Infrasructure.Persistance.Repositories
 
     foreach (var product in products)
     {
+       
+        await _dbContext.Entry(product)
+            .Collection(d => d.Attributes)
+            .LoadAsync(cancellationToken);
         // Підєднати залежності для кожного продукту
         await _dbContext.Entry(product)
             .Collection(d => d.Categories)
@@ -96,6 +112,28 @@ namespace Catalog.Infrasructure.Persistance.Repositories
             .LoadAsync(cancellationToken);
         
  
+ if (product.Attributes != null)
+    {
+        foreach (var attribute in product.Attributes)
+        {
+            if (attribute != null)
+            {
+                attribute.Product = null;
+               
+                // attribute.Attribute = await _dbContext.Attributes
+                //     .Where(m => m.Id == attribute.AttributeId)
+                //     .Select(m => new Catalog.Domain.Entities.Attribute
+                //     {
+                      
+                //         Id = m.Id,
+                //         Title = m.Title,
+                //         Value = m.Value,
+                       
+                //     })
+                //     .FirstOrDefaultAsync(cancellationToken);
+            }
+        }
+    }
  if (product.Marks != null)
     {
         foreach (var mark in product.Marks)
