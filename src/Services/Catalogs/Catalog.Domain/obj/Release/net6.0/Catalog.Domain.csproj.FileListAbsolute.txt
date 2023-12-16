@@ -1,0 +1,12 @@
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\bin\Release\net6.0\Catalog.Domain.deps.json
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\bin\Release\net6.0\Catalog.Domain.dll
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\bin\Release\net6.0\Catalog.Domain.pdb
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.AssemblyInfoInputs.cache
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.AssemblyInfo.cs
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.csproj.CoreCompileInputs.cache
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.sourcelink.json
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.dll
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\refint\Catalog.Domain.dll
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\Catalog.Domain.pdb
+C:\Users\solpo\source\BigProjects\WumShop\Updated\backendWUM\src\Services\Catalogs\Catalog.Domain\obj\Release\net6.0\ref\Catalog.Domain.dll

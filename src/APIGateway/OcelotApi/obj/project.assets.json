@@ -537,28 +537,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\WellDone\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\solpo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
+      "projectUniqueName": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\Updated\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
       "projectName": "OcelotApi",
-      "projectPath": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
-      "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
-      "outputPath": "d:\\Диплом\\backendWUM\\src\\APIGateway\\OcelotApi\\obj\\",
+      "projectPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\Updated\\backendWUM\\src\\APIGateway\\OcelotApi\\OcelotApi.csproj",
+      "packagesPath": "C:\\Users\\solpo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\Updated\\backendWUM\\src\\APIGateway\\OcelotApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\WellDone\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\solpo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -605,7 +609,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

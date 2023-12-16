@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kmIzjlySQPhujX/zHYi6RHqB9c8+ILmaxm+sLKG1dJcQdmSbyJ4no4MSgr6F9BaHrFBwUUtTm7B08mYb/dnacQ==",
+  "dgSpecHash": "qGpT5FnsMyYMzK1fb8nVDycoeT9McaTxDe+CzeyryX2sMf7k7IFvNMxDsmS4t0QBLMFM+KVfN1DG2ubWXHvOvw==",
   "success": true,
-  "projectFilePath": "D:\\Диплом\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
+  "projectFilePath": "C:\\Users\\solpo\\source\\BigProjects\\WumShop\\Updated\\backendWUM\\src\\BuildingBlocks\\EventBus\\EventBus\\EventBus.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\WellDone\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\solpo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

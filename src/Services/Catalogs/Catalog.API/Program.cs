@@ -121,7 +121,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
     endpoints.MapGrpcService<CatalogGrpcService>();
 });
-PrepDb.PrepPopulation(app, builder.Environment.IsProduction());
+//PrepDb.PrepPopulation(app, builder.Environment.IsProduction());
 
 app.Run();
 
