@@ -23,11 +23,12 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
        
         public int? Popular { get; set; }
         public int? ImageId { get; set; }
+        public int? BrandId { get; set; }
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
 
-       
+       public string ImagePath{get;set;}
 
-       public UploadedFiles UploadedFiles {get;set;}
+    //    public UploadedFiles UploadedFiles {get;set;}
             public IEnumerable<ProductToMark>  Marks  { get; set; }
             // public IEnumerable<ProductToAttribute>  Attributes  { get; set; }
             public IEnumerable<ProductToCategory>  Categories  { get; set; }

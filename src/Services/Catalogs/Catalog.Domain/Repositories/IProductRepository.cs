@@ -11,6 +11,7 @@ namespace Catalog.Domain.Repositories
     public interface IProductRepository
     {
         Task<IEnumerable<Product>> GetAllAsync(CancellationToken cancellationToken);
+        Task<IEnumerable<Brand>> GetAllBrandsAsync(CancellationToken cancellationToken);
         Task<IEnumerable<Catalog.Domain.Entities.Attribute>> GetAllAttributesAsync(CancellationToken cancellationToken);
         Task<IEnumerable<Product>> GetMinMaxPriceAsync(CancellationToken cancellationToken);
              Task<IEnumerable<Product>> FindAllAsync(Expression<Func<Product, bool>> predicate, CancellationToken cancellationToken = default);

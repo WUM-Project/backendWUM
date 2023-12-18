@@ -38,6 +38,18 @@ namespace Catalog.Infrasructure.Persistance.Repositories
     });
      
         }
+         public async Task<IEnumerable<Brand>> GetAllBrandsAsync(CancellationToken cancellationToken = default)
+        {
+   
+        var products = await _dbContext.Brands
+        .Include(p => p.UploadedFiles)
+        .ToListAsync(cancellationToken);
+
+    return products;
+        //     return await _dbContext.Products
+        // .Include(p => p.UploadedFiles)
+        // .ToListAsync(cancellationToken);
+        }
  public async Task<IEnumerable<Product>> GetMinMaxPriceAsync(CancellationToken cancellationToken = default)
         {
 
