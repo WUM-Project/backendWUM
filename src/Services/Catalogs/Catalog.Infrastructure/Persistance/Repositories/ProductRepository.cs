@@ -24,17 +24,19 @@ namespace Catalog.Infrasructure.Persistance.Repositories
         {
 
     
-        var products = await _dbContext.Attributes
+        var products = await _dbContext.Attributes.Include(p=>p.Products)
         
         .ToListAsync(cancellationToken);
-
+         
     return products.Select(p => new Catalog.Domain.Entities.Attribute
     {
         Id = p.Id,
         OriginId = p.OriginId,
         Lang = p.Lang,
         Status = p.Status,
-       Title = p.Title
+       Title = p.Title,
+       Products= p.Products
+
     });
      
         }
