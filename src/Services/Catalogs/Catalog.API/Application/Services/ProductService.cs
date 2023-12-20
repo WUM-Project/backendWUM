@@ -15,6 +15,7 @@ using Catalog.API.Application.Services.Interfaces;
 using Catalog.API.Application.Contracts.Dtos.ProductDtos;
 using Catalog.API.Application.Contracts.Dtos.AttributeDtos;
 using Catalog.API.Application.Contracts.Dtos.BrandDtos;
+using Catalog.API.Application.Contracts.Dtos.UploadDtos;
 
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
@@ -132,9 +133,42 @@ namespace Catalog.API.Application.Services
             {
                 throw new UserNotFoundException(id);
             }
-
+         
+            //     var productDtos = product.Select(p => new ProductCatalogDto
+            // {
+            //     Id = p.Id,
+            //     OriginId = p.OriginId,
+            //     Lang = p.Lang,
+            //     Status = p.Status,
+            //     Price = p.Price,
+            //     DiscountedPrice = p.DiscountedPrice,
+            //     Name = p.Name,
+            //     Popular = p.Popular,
+            //     ImageId = p.ImageId,
+            //     BrandId = p.BrandId,
+            //     CreatedAt = p.CreatedAt,
+            //     ImagePath = p.UploadedFiles?.FilePath ?? null,
+            //     // UploadedFiles = p.UploadedFiles,
+            //     Marks = p.Marks,
+            //     Categories = p.Categories,
+            //     Attributes = p.Attributes.Select(attr => new AttributeProductDto
+            //     {
+            //         AttributeId = attr.AttributeId,
+            //         Value = attr.Value
+            //     }).ToList()
+            // });
+            
             var productDto = _mapper.Map<ProductReadDto>(product);
-
+            if(productDto.ImageId != null){
+            productDto.ImagePath = product.UploadedFiles.FilePath;
+            
+            }
+            if(product.ProductToUploadedFile.Count>0){
+                productDto.Gallery =product.ProductToUploadedFile.Select(item =>new UploadReadDto{
+                    Id= item.UploadId,
+                    ImagePath = item.UploadedFile.FilePath
+                });
+            }
             // userDto.UploadedFiles = String.Join(",", user.UploadedFiles.ToArray().Select(x => x.Name).ToArray());
 
             return productDto;
