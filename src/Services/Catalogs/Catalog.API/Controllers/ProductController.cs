@@ -83,8 +83,7 @@ namespace Catalog.API.Controllers
 
     [HttpGet]
     [Route("FindAllProducts")]
-    public async Task<IActionResult> GetProducts(int page, string filter, string? attributeIds,
-string? attributeValues, int categoryId, decimal? minPrice,  // Nullable decimal for the minimum price
+    public async Task<IActionResult> GetProducts(int page, string filter, int categoryId, decimal? minPrice,  // Nullable decimal for the minimum price
 decimal? maxPrice,  // Nullable decimal for the maximum price
  int middleVal = 10,
 int cntBetween = 5, int limit = 15, string sortBy = "newest",
@@ -92,17 +91,7 @@ int? brandId = null,
 CancellationToken cancellationToken = default)
     {
       Console.WriteLine("\n---> Getting All Products...");
-      // Збір пар ідентифікаторів та значень атрибутів у масив
-      List<AttributeProductDto> attributes = new List<AttributeProductDto>();
-      List<int> parsedAttributeIds = attributeIds?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
-      List<string> parsedAttributeValues = attributeValues?.Split(',').ToList() ?? new List<string>();
-      if (parsedAttributeIds.Count > 0 && parsedAttributeValues.Count > 0)
-      {
-        attributes = parsedAttributeIds
-            .Zip(parsedAttributeValues, (id, value) => new AttributeProductDto { AttributeId = id, Value = value })
-            .ToList();
-      }
-      Console.WriteLine(attributes);
+      
       // Оригінальний вираз predicate, який фільтрує за вказаними умовами
       Expression<Func<Product, bool>> originalPredicate = p =>
           (String.IsNullOrEmpty(filter) || (p.Name.ToLower() + " " + p.Description.ToLower()).Contains(filter.ToLower()))
@@ -120,17 +109,7 @@ CancellationToken cancellationToken = default)
 
         products = products?.Where(x => x.Lang?.Contains(lang.ToLower()) ?? false)?.ToList();
       }
-      if (attributes != null && attributes.Count > 0)
-      {
-
-        //       products =   products.Where(p =>
-        //     attributes.Any(attr => p.Attributes.Any(a => a.AttributeId == attr.AttributeId && a.Value == attr.Value))
-        // );
-        products = products.Where(p =>
-      attributes.All(attr => p.Attributes.Any(a => a.AttributeId == attr.AttributeId && a.Value == attr.Value))
-  ).Select(p => p);
-        // Застосування додаткових умов фільтрації за категорією, можливо, іншими фільтрами
-      }
+     
       if (middleVal <= cntBetween)
       {
         return BadRequest(new { Error = "MiddleVal must be more than cntBetween" });
