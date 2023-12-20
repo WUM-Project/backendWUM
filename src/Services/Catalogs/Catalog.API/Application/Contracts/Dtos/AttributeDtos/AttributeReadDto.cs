@@ -1,5 +1,6 @@
 using System;
 using Catalog.Domain.Entities;
+
 namespace Catalog.API.Application.Contracts.Dtos.AttributeDtos
 {
     public class AttributeReadDto
@@ -9,6 +10,7 @@ namespace Catalog.API.Application.Contracts.Dtos.AttributeDtos
         public int OriginId { get; set; }
         public string Lang { get; set; }
         public string Title { get; set; }
+            public IEnumerable<AttributeProductDto>  Values  { get; set; }= new List<AttributeProductDto>();
        
     
 

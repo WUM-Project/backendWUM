@@ -14,6 +14,8 @@ namespace Catalog.API.Application.Contracts.Profiles
             // Source -> Targer
             CreateMap<Catalog.Domain.Entities.Attribute, AttributeReadDto>();
             CreateMap<AttributeReadDto, Catalog.Domain.Entities.Attribute>();
+            CreateMap<Catalog.Domain.Entities.Attribute, AttributeProductValDto>();
+            CreateMap<AttributeProductValDto, Catalog.Domain.Entities.Attribute>();
             CreateMap<Catalog.Domain.Entities.Attribute, AttributeProductDto>();
             CreateMap<AttributeProductDto, Catalog.Domain.Entities.Attribute>();
           

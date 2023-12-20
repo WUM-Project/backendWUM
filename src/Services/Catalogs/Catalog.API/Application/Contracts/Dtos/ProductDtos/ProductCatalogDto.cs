@@ -34,7 +34,7 @@ namespace Catalog.API.Application.Contracts.Dtos.ProductDtos
             public IEnumerable<ProductToCategory>  Categories  { get; set; }
             // = new List<ProductToCategory>();
     
-    public List<AttributeProductDto> Attributes { get; set; }
+    public List<AttributeProductValDto> Attributes { get; set; }
 
     }
     

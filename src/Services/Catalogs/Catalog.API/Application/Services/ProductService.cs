@@ -50,8 +50,27 @@ namespace Catalog.API.Application.Services
         public async Task<IEnumerable<AttributeReadDto>> GetAllAttributesAsync(CancellationToken cancellationToken = default)
         {
             var categories = await _repositoryManager.ProductRepository.GetAllAttributesAsync(cancellationToken);
+            var attributeDto = categories.Select(p => new AttributeReadDto
+            {
+                Id = p.Id,
 
-            var productDto = _mapper.Map<IEnumerable<AttributeReadDto>>(categories);
+                Lang = p.Lang,
+
+                Title = p.Title,
+
+
+                Values = p.Products
+        .GroupBy(item => item.Value)
+        .Select(group => new AttributeProductDto
+        {
+            AttributeId = group.First().AttributeId,
+            Value = group.First().Value,
+            Count = group.Count() // Кількість повторень
+        })
+        .ToList()
+
+            });
+            var productDto = _mapper.Map<IEnumerable<AttributeReadDto>>(attributeDto);
 
 
 
@@ -113,7 +132,7 @@ namespace Catalog.API.Application.Services
                 // UploadedFiles = p.UploadedFiles,
                 Marks = p.Marks,
                 Categories = p.Categories,
-                Attributes = p.Attributes.Select(attr => new AttributeProductDto
+                Attributes = p.Attributes.Select(attr => new AttributeProductValDto
                 {
                     AttributeId = attr.AttributeId,
                     Value = attr.Value
@@ -133,39 +152,20 @@ namespace Catalog.API.Application.Services
             {
                 throw new UserNotFoundException(id);
             }
-         
-            //     var productDtos = product.Select(p => new ProductCatalogDto
-            // {
-            //     Id = p.Id,
-            //     OriginId = p.OriginId,
-            //     Lang = p.Lang,
-            //     Status = p.Status,
-            //     Price = p.Price,
-            //     DiscountedPrice = p.DiscountedPrice,
-            //     Name = p.Name,
-            //     Popular = p.Popular,
-            //     ImageId = p.ImageId,
-            //     BrandId = p.BrandId,
-            //     CreatedAt = p.CreatedAt,
-            //     ImagePath = p.UploadedFiles?.FilePath ?? null,
-            //     // UploadedFiles = p.UploadedFiles,
-            //     Marks = p.Marks,
-            //     Categories = p.Categories,
-            //     Attributes = p.Attributes.Select(attr => new AttributeProductDto
-            //     {
-            //         AttributeId = attr.AttributeId,
-            //         Value = attr.Value
-            //     }).ToList()
-            // });
-            
+
+
+
             var productDto = _mapper.Map<ProductReadDto>(product);
-            if(productDto.ImageId != null){
-            productDto.ImagePath = product.UploadedFiles.FilePath;
-            
+            if (productDto.ImageId != null)
+            {
+                productDto.ImagePath = product.UploadedFiles.FilePath;
+
             }
-            if(product.ProductToUploadedFile.Count>0){
-                productDto.Gallery =product.ProductToUploadedFile.Select(item =>new UploadReadDto{
-                    Id= item.UploadId,
+            if (product.ProductToUploadedFile.Count > 0)
+            {
+                productDto.Gallery = product.ProductToUploadedFile.Select(item => new UploadReadDto
+                {
+                    Id = item.UploadId,
                     ImagePath = item.UploadedFile.FilePath
                 });
             }

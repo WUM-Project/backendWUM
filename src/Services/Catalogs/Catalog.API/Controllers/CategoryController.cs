@@ -73,36 +73,7 @@ namespace Catalog.API.Controllers
 
             return Ok(result);
         }
-           [HttpGet("GetImage")]
-        public async Task<IActionResult> GetImage(string productcode)
-        {
-            string Imageurl = string.Empty;
-            string hosturl= $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
-            try
-            {
-                string Filepath = GetFilepath(productcode);
-                string imagepath = Filepath + "\\" + productcode + ".jpg";
-                if (System.IO.File.Exists(imagepath))
-                {
-                    Imageurl = hosturl + "/Uploads/categories/" + productcode + ".jpg";
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch(Exception ex) 
-            { 
-            }
-            return Ok(Imageurl);
-
-        }
-        [NonAction]
-        private string GetFilepath(string productcode)
-        {
-            return this.environment.WebRootPath + "\\Uploads\\categories\\";
-        }
-
+       
 
 
 
