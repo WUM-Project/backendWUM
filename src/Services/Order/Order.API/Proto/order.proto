@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcOrder";
+
+
+service OrderGrpc{
+
+
+	rpc GetUserOrders(OrderRequest) returns (OrderResponse) {}
+	
+}
+
+
+
+
+message OrderRequest {
+    string userId = 1;
+}
+
+message OrderResponse {
+    repeated int32 userId = 2;
+    repeated OrderDataResponse orderResponses = 3;
+}
+
+message OrderDataResponse {
+    int32 id = 1;
+    string userId = 2;
+    int32 addressId = 3;
+    int32 status = 4;
+    repeated ProductData productsJson = 5;  // Products added here
+    Addresses addresses = 6;               // Addresses added here
+    int32 totalPrice = 7;
+    int32 deliveryType = 8;
+    int32 payType = 9;
+    string createdAt = 10;
+    string updatedAt = 11;
+}
+
+message ProductData {
+    int32 id = 1;
+    string name = 2;
+    int32 count = 3;
+    double price = 4;
+    double discountedPrice = 5;
+    string imagePath = 6;
+}
+
+message Addresses {
+    int32 id = 1;
+    string street = 2;
+    string apartment = 3;
+    string house = 4;
+    string district = 5;
+    string city = 6;
+    string department = 7;
+    string firstName = 8;
+    string lastName = 9;
+    string fatherName = 10;
+    string email = 11;
+    string phone = 12;
+    string selfPickupPoint = 13;
+}
+
+
+

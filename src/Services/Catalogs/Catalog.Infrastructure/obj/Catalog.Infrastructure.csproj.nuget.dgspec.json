@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj": {}
+    "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj": {
+    "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
+        "projectUniqueName": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
         "projectName": "Catalog.Domain",
-        "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
+        "projectPath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj",
         "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
-        "outputPath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\obj\\",
+        "outputPath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -60,14 +60,14 @@
         }
       }
     },
-    "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj": {
+    "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj",
+        "projectUniqueName": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj",
         "projectName": "Catalog.Infrastructure",
-        "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj",
+        "projectPath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\Catalog.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\WellDone\\.nuget\\packages\\",
-        "outputPath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\obj\\",
+        "outputPath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj": {
-                "projectPath": "D:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj"
+              "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj": {
+                "projectPath": "d:\\Диплом\\backendWUM\\src\\Services\\Catalogs\\Catalog.Domain\\Catalog.Domain.csproj"
               }
             }
           }

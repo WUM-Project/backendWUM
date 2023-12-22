@@ -24,6 +24,7 @@ using Microsoft.Extensions.Configuration;
 using Applicant.API.Grpc.Interfaces;
 using Applicant.API.Application.Contracts.Infrastructure;
 using Applicant.API.Application.Models;
+using Applicant.API.Application.Contracts.Dtos.OrderDtos;
 
 namespace Applicant.API.Application.Services
 {
@@ -36,11 +37,11 @@ namespace Applicant.API.Application.Services
         private PasswordHasher<User> _hasher;
         private readonly IEmailService _emailService;
         private readonly IRepositoryManager _repositoryManager;
-        // private readonly IExamGrpcService _examGrpcService;
+        private readonly IOrderGrpcService _orderGrpcService;
         // private readonly IReportGrpcService _reportGrpcService;
     // IReportGrpcService reportGrpcService,
 //    IExamGrpcService examGrpcService,
-        public UserService(IRepositoryManager repositoryManager, IMapper mapper,
+        public UserService(IRepositoryManager repositoryManager, IOrderGrpcService orderGrpcService, IMapper mapper,
        IEmailService emailService)
         {
             _mapper = mapper;
@@ -48,7 +49,7 @@ namespace Applicant.API.Application.Services
             _hasher = new PasswordHasher<User>();
             _repositoryManager = repositoryManager;
             // _reportGrpcService = reportGrpcService;
-            // _examGrpcService = examGrpcService;
+            _orderGrpcService = orderGrpcService;
         }
 
         public async Task<IEnumerable<UserReadDto>> GetAllAsync(CancellationToken cancellationToken = default)
@@ -82,6 +83,20 @@ namespace Applicant.API.Application.Services
             userDto.Roles = String.Join(",", user.Roles.ToArray().Select(x => x.Name).ToArray());
 
             return userDto;
+        }
+        public async Task<Google.Protobuf.Collections.RepeatedField<GrpcOrder.OrderDataResponse>> GetByOrdersIdAsync(string id, CancellationToken cancellationToken = default)
+        {
+             Console.WriteLine(id);
+               var orders =  _orderGrpcService.GetUserOrders(id);
+               
+
+            if (orders is null)
+            {
+                // throw new UserNotFoundException(id);
+            }
+       
+
+            return orders.OrderResponses;
         }
         public async Task<UserReadDto> CreateAsync(UserCreateDto userCreateDto, CancellationToken cancellationToken = default)
         {

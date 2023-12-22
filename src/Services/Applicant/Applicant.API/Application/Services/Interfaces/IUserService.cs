@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Applicant.API.Application.Contracts.Dtos.UserDtos;
 using System.Linq.Expressions;
+using Applicant.API.Application.Configurations;
+using Applicant.API.Application.Contracts.Dtos.OrderDtos;
 
 namespace Applicant.API.Application.Services.Interfaces
 {
@@ -11,6 +13,7 @@ namespace Applicant.API.Application.Services.Interfaces
     {
         Task<IEnumerable<UserReadDto>> GetAllAsync(CancellationToken cancellationToken = default);
         Task<UserReadDto> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+        Task<Google.Protobuf.Collections.RepeatedField<GrpcOrder.OrderDataResponse>> GetByOrdersIdAsync(string id, CancellationToken cancellationToken = default);
         Task<UserReadDto> CreateAsync(UserCreateDto userCreateDto, CancellationToken cancellationToken = default);
         Task UpdateAsync(string id, UserUpdateDto userUpdateDto, CancellationToken cancellationToken = default);
         Task UpdateEmailAsync(UserChangeEmailDto userChangeEmailDto, CancellationToken cancellationToken = default);

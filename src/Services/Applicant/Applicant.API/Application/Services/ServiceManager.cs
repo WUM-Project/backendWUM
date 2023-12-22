@@ -19,10 +19,10 @@ namespace Applicant.API.Application.Services
         private readonly Lazy<IUserService> _lazyUserService;
 //  IReportGrpcService reportGrpcService, IExamGrpcService examGrpcService,
         public ServiceManager(IRepositoryManager repositoryManager, IMapper mapper, 
-            IOptionsMonitor<JwtConfig> optionsMonitor, IEmailService emailService)
+            IOptionsMonitor<JwtConfig> optionsMonitor, IEmailService emailService,IOrderGrpcService orderGrpcService)
         {
             _lazyAccessCodeService = new Lazy<IAccessCodeService>(() => new AccessCodeService(repositoryManager, mapper, optionsMonitor,emailService));
-            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager, mapper,  emailService));
+            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager,orderGrpcService, mapper,  emailService));
             // reportGrpcService, examGrpcService,
         }
 

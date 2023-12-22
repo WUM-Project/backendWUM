@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Proto/Question.cs \
+obj\Debug\net6.0\Proto/QuestionGrpc.cs: Proto/question.proto

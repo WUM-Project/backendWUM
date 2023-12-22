@@ -1,0 +1,15 @@
+D:\Диплом\Exam\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.deps.json
+D:\Диплом\Exam\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.dll
+D:\Диплом\Exam\Order.Infrastructure\bin\Debug\net6.0\Order.Infrastructure.pdb
+D:\Диплом\Exam\Order.Infrastructure\bin\Debug\net6.0\Order.Domain.dll
+D:\Диплом\Exam\Order.Infrastructure\bin\Debug\net6.0\Order.Domain.pdb
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.csproj.AssemblyReference.cache
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.AssemblyInfoInputs.cache
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.AssemblyInfo.cs
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.csproj.CopyComplete
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.dll
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\refint\Order.Infrastructure.dll
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\Order.Infrastructure.pdb
+D:\Диплом\Exam\Order.Infrastructure\obj\Debug\net6.0\ref\Order.Infrastructure.dll

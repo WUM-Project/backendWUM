@@ -47,9 +47,9 @@ builder.Services.AddCors(c =>
 // }
 
 //Grpc
-builder.Services.AddScoped<IExamGrpcService, ExamGrpcService>();
-builder.Services.AddScoped<IReportGrpcService, ReportGrpcService>();
-
+// builder.Services.AddScoped<IExamGrpcService, ExamGrpcService>();
+// builder.Services.AddScoped<IReportGrpcService, ReportGrpcService>();
+    builder.Services.AddScoped<IOrderGrpcService, OrderGrpcService>();
 // Email configuration
 builder.Services.Configure<EmailSettings>(c => builder.Configuration.GetSection("EmailSettings").Bind(c));
 builder.Services.AddTransient<IEmailService, EmailService>();

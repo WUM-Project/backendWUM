@@ -70,6 +70,15 @@ namespace Applicant.API.Controllers
 
             return Ok(userDto);
         }
+       [HttpGet("orders/{id}", Name = "GetUserOrdersById")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+public async Task<IActionResult> GetUserOrdersById(string id, CancellationToken cancellationToken = default)
+{
+    Console.WriteLine($"\n---> Getting User Orders by Id: {id}");
+    var userDto = await _serviceManager.UserService.GetByOrdersIdAsync(id, cancellationToken);
+
+    return Ok(userDto);
+}
 
 
         [HttpPost]
