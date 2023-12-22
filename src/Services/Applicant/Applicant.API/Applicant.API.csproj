@@ -38,9 +38,7 @@
     <ProjectReference Include="..\Applicant.Infrastructure\Applicant.Infrastructure.csproj" />
   </ItemGroup>
   	<ItemGroup>
-		 <Protobuf Include="Proto\exam.proto" GrpcServices="Client" />
 		 <Protobuf Include="Proto\order.proto" GrpcServices="Client" />
-		<Protobuf Include="Proto\report.proto" GrpcServices="Client" /> 
 		<Protobuf Include="Proto\applicant.proto" GrpcServices="Server" />
 	</ItemGroup>
 
